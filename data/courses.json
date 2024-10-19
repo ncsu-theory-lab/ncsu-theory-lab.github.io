@@ -1,0 +1,10 @@
+[
+  {
+    "name": "Introduction to Algorithms",
+    "description": "A study of algorithms and data structures, emphasizing problem-solving techniques."
+  },
+  {
+    "name": "Theory of Computation",
+    "description": "An exploration of the mathematical foundations of computer science, including automata theory."
+  }
+]

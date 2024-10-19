@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Dr. Alice Smith",
+    "photo": "images/alice.jpg",
+    "research": "Quantum Computing, Algorithms",
+    "website": "https://example.com/alice"
+  },
+  {
+    "name": "Dr. Bob Johnson",
+    "photo": "images/bob.jpg",
+    "research": "Machine Learning, Complexity Theory",
+    "website": "https://example.com/bob"
+  }
+]

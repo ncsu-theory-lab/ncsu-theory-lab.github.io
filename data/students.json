@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Jane Doe",
+    "photo": "images/jane.jpg",
+    "research": "Cryptography",
+    "website": "https://example.com/jane"
+  },
+  {
+    "name": "John Doe",
+    "photo": "images/john.jpg",
+    "research": "Distributed Systems",
+    "website": "https://example.com/john"
+  }
+]

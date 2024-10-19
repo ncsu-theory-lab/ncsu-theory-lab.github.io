@@ -1,0 +1,52 @@
+/* Reset body margin and padding */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f8f9fa; /* Light background color for better aesthetics */
+}
+
+/* Ensure consistent margin on both sides */
+.page-container {
+  max-width: 1200px; /* Limit the content width */
+  margin: 0 auto; /* Center the content horizontally */
+  padding-left: 20px; /* Add space on the left */
+  padding-right: 20px; /* Add space on the right */
+}
+
+/* Optional styling for header */
+#header {
+  margin-bottom: 20px;
+}
+
+/* Ensure cards have consistent spacing */
+.list-group-item {
+  margin-bottom: 15px;
+}
+
+/* Responsive handling */
+@media (max-width: 576px) {
+  .page-container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+header {
+  background-color: #333; /* Gray background */
+}
+
+header h1 {
+  font-size: 1.5rem; /* Adjust font size as needed */
+}
+
+.bg-danger {
+  background-color: #c00 !important; /* NC State red */
+}
+
+.text-white {
+  color: #fff !important; /* White text */
+}
+
+  text-decoration: underline; /* Add underline on hover for clarity */
+}
