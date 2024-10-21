@@ -28,9 +28,8 @@ export async function renderStudents() {
         <div class="card h-100 text-center">
           <img src="${person.photo}" class="card-img-top" alt="${person.name}" style="height: 200px; object-fit: cover;">
           <div class="card-body">
-            <h5 class="card-title">${person.name}</h5>
-            <p class="card-text">Research: ${person.research}</p>
-            <a href="${person.website}" target="_blank" class="btn btn-primary">Website</a>
+            <a href="${person.website}" target="_blank" class="card-title name-link">${person.name}</a>
+            <p class="card-text mt-2">Research: ${person.research}</p>
           </div>
         </div>
       `;

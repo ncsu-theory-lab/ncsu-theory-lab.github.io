@@ -20,7 +20,7 @@ export async function renderFaculty() {
     const row = document.createElement("div");
     row.className = "row"; // Bootstrap row to contain faculty cards
 
-    data.forEach((person, index) => {
+    data.forEach((person) => {
       const card = document.createElement("div");
       card.className = "col-md-4 mb-4"; // 3 cards per row on medium screens and up
 
@@ -28,9 +28,8 @@ export async function renderFaculty() {
         <div class="card h-100 text-center">
           <img src="${person.photo}" class="card-img-top" alt="${person.name}" style="height: 200px; object-fit: cover;">
           <div class="card-body">
-            <h5 class="card-title">${person.name}</h5>
-            <p class="card-text">Research: ${person.research}</p>
-            <a href="${person.website}" target="_blank" class="btn btn-primary">Website</a>
+            <a href="${person.website}" target="_blank" class="card-title name-link">${person.name}</a>
+            <p class="card-text mt-2">Research: ${person.research}</p>
           </div>
         </div>
       `;
