@@ -2,42 +2,27 @@ import { fetchData } from './loadComponents.js';
 
 export async function renderCourses() {
   const courses = await fetchData("data/courses.json");
-  const container = document.getElementById("coursesAccordion");
+  const container = document.getElementById("coursesList");
   container.innerHTML = ""; // Clear previous content
 
   if (courses.length === 0) {
     container.innerHTML = `
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" disabled>No courses available at the moment.</button>
-        </h2>
+      <div class="list-group-item">
+        <h5 class="mb-1">No courses available at the moment.</h5>
       </div>`;
     return;
   }
 
-  courses.forEach((course, index) => {
-    const card = document.createElement("div");
-    card.className = "accordion-item";
+  courses.forEach((course) => {
+    const listItem = document.createElement("a");
+    listItem.className = "list-group-item list-group-item-action flex-column align-items-start";
 
-    card.innerHTML = `
-      <h2 class="accordion-header" id="courseHeading${index}">
-        <button class="accordion-button collapsed" 
-                type="button" data-bs-toggle="collapse" 
-                data-bs-target="#courseCollapse${index}" 
-                aria-expanded="false" 
-                aria-controls="courseCollapse${index}">
-          ${course.name}
-        </button>
-      </h2>
-      <div id="courseCollapse${index}" 
-           class="accordion-collapse collapse" 
-           aria-labelledby="courseHeading${index}" 
-           data-bs-parent="#coursesAccordion">
-        <div class="accordion-body">
-          <strong>Description:</strong> ${course.description}
-        </div>
+    listItem.innerHTML = `
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">${course.name}</h5>
       </div>
+      <p class="mb-1">${course.description}</p>
     `;
-    container.appendChild(card);
+    container.appendChild(listItem);
   });
 }

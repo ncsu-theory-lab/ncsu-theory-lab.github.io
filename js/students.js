@@ -17,27 +17,28 @@ export async function renderStudents() {
       return;
     }
 
-    const row = document.createElement("div");
-    row.className = "row"; // Bootstrap row to contain student cards
+    const deck = document.createElement("div");
+    deck.className = "card-deck"; // Bootstrap card-deck for a cohesive layout
 
     data.forEach((person) => {
       const card = document.createElement("div");
-      card.className = "col-md-4 mb-4"; // 3 cards per row on medium screens and up
+      card.className = "card mb-4"; // Individual card with margin
 
       card.innerHTML = `
-        <div class="card h-100 text-center">
-          <img src="${person.photo}" class="card-img-top" alt="${person.name}" style="height: 200px; object-fit: cover;">
-          <div class="card-body">
-            <a href="${person.website}" target="_blank" class="card-title name-link">${person.name}</a>
-            <p class="card-text mt-2">Research: ${person.research}</p>
-          </div>
+        <img src="${person.photo}" class="card-img-top" alt="${person.name}" style="height: 200px; object-fit: cover;">
+        <div class="card-body text-center">
+          <h5 class="card-title">${person.name}</h5> <!-- Name as the card title, centered -->
+          <p class="card-text mt-2">Research: ${person.research}</p> <!-- Research as card text -->
+        </div>
+        <div class="card-footer text-center">
+          <a href="${person.website}" target="_blank" class="btn btn-primary">Go to Website</a> <!-- Button for the website link -->
         </div>
       `;
 
-      row.appendChild(card); // Append each card to the row
+      deck.appendChild(card); // Append each card to the card-deck
     });
 
-    container.appendChild(row); // Append the row to the content container
+    container.appendChild(deck); // Append the card deck to the content container
   } catch (error) {
     console.error("Error rendering student content:", error);
     container.innerHTML = "<p>Error loading student data. Please try again later.</p>";

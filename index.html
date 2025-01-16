@@ -14,7 +14,7 @@
   <!-- Custom Styles -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Render Content JS - Loads after DOM is parsed -->
+  <!-- Render Content JS -->
   <script type="module" src="js/renderContent.js" defer></script>
 </head>
 <body>
@@ -22,12 +22,13 @@
   <div id="ncstate-utility-bar" data-prop-show-brick="1" data-prop-cse-id="00578865650663686:7xmauxacbr4"></div>
   <script src="https://cdn.ncsu.edu/brand-assets/utility-bar/v3/ncstate-utility-bar.js"></script>
 
-  <!-- Header -->
-  <header>
-    <h1 class="text-center text-black">CS Theory Lab</h1>
-  </header>
-
+  <!-- Page Container with Header -->
   <div class="page-container mt-4">
+    <!-- Header -->
+    <header class="text-center mb-4">
+      <h1 class="navbar-brand text-black py-4">CS Theory Lab</h1>
+    </header>
+
     <div class="row">
       <div class="col-lg-8">
         <!-- About Section -->
@@ -52,22 +53,24 @@
 
       <div class="col-lg-4">
         <!-- Sidebar Components -->
-        <div id="calendar" class="mb-4">
+        <!-- <div id="calendar" class="mb-4">
           <h5>Calendar</h5>
           <iframe 
             src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" 
             style="border: 0" width="100%" height="300" frameborder="0" scrolling="no">
           </iframe>
+        </div> -->
+
+        <div id="eventlist" class="table-responsive mb-4">
+          <h5>Upcoming Events</h5>
+          <table class="cal">
+            <tbody id="eventsList"></tbody> <!-- Dynamic content will be added here -->
+          </table>
         </div>
 
-        <div id="seminars" class="mb-4">
-          <h5>Upcoming Seminars</h5>
-          <div class="accordion" id="seminarsAccordion"></div>
-        </div> 
-        
         <div id="courses" class="mb-4">
-          <h5>Available Courses</h5>
-          <div class="accordion" id="coursesAccordion"></div>
+          <h5>Courses</h5>
+          <div class="list-group" id="coursesList"></div>
         </div>
 
         <div id="links">

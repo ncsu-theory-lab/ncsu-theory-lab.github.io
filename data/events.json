@@ -1,12 +1,20 @@
 [
   {
-    "title": "Seminar on Quantum Computing",
-    "date": "2024-10-20",
-    "description": "Dr. Alice Smith will present her latest research."
+    "title": "Code Black Kickoff Event",
+    "date": "2025-01-21T00:00:00Z",
+    "link": "https://www.google.com/calendar/event?eid=event1",
+    "description": "Join us to explore coding challenges and networking opportunities!"
   },
   {
-    "title": "Workshop on Machine Learning",
-    "date": "2024-11-10",
-    "description": "A hands-on workshop conducted by Dr. Bob Johnson."
+    "title": "WiCS: Spring Edition",
+    "date": "2025-01-21T00:00:00Z",
+    "link": "https://www.google.com/calendar/event?eid=event2",
+    "description": "Celebrating women in computer science this spring."
+  },
+  {
+    "title": "LA/CSC Kickoff Event",
+    "date": "2025-01-22T00:00:00Z",
+    "link": "https://www.google.com/calendar/event?eid=event3",
+    "description": "Learn about upcoming LA/CSC activities for the semester."
   }
 ]

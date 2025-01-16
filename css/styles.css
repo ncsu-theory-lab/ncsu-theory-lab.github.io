@@ -4,7 +4,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif; /* Use Roboto font */
-  background-color: #f8f9fa; /* Light background color */
+  background-color: #ffffff; /* White background color */
 }
 
 .page-container {
@@ -13,10 +13,11 @@ body {
   padding: 20px;
 }
 
+/* Align the header and apply padding to move it down */
 header h1 {
-  font-size: 3rem; /* Large font size */
-  font-weight: bold; /* Bold text */
-  margin: 20px 0; /* Add spacing around the header */
+  font-size: 3rem !important; /* Large font size */
+  margin: 0; /* Remove default margin */
+  padding-top: 20px; /* Add padding to push it down */
 }
 
 /* Tabs spacing and styling */
@@ -31,19 +32,19 @@ header h1 {
 }
 
 /* Sidebar sections */
-#calendar, #seminars, #courses, #links {
+/*#calendar, #seminars, #courses, #links {
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 15px;
   background: #fff;
-}
+}*/
 
 /* Sidebar headings */
-#calendar h5, #seminars h5, #courses h5, #links h5 {
-  color: #d0021b; /* NC State red */
+/*#calendar h5, #seminars h5, #courses h5, #links h5 {
+  color: #d0021b;
   font-size: 1.2rem;
   font-weight: bold;
-}
+}*/
 
 /* Links styling */
 #links ul {
@@ -59,4 +60,73 @@ header h1 {
 #links li a:hover {
   text-decoration: underline;
   color: #003d99;
+}
+
+.calevent {
+  background-color: #c00; /* NC State red */
+  color: white;
+  padding: 10px;
+  text-align: center;
+  width: 20%; /* Restrict width to 20% */
+  vertical-align: middle; /* Align text vertically */
+  border-radius: 0; /* Remove any curves for sharp edges */
+  border-right: 1px solid white; /* Add a white border to separate columns */
+  height: 120px; /* Set a fixed height for each .calevent */
+}
+
+.monthdate {
+  font-size: 32px;
+  font-weight: normal; /* Normal weight for date */
+}
+
+/* Event title container styling */
+.eventtitle {
+  padding: 15px 7px; /* Reduced padding for closer spacing */
+  width: 80%; /* Use 80% of the row */
+  height: 120px; /* Ensure the event description box also has the same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Ensure space between title and description */
+  overflow: hidden; /* Prevent overflowing content */
+}
+
+/* Ensure title doesn't affect layout if it wraps */
+.eventtitle a {
+  text-decoration: none; /* Remove underlines from the title */
+  color: #000; /* Default text color for title */
+  font-weight: normal; /* Set font weight to normal */
+  line-height: 1.2em; /* Adjust line height for better spacing */
+  white-space: nowrap; /* Prevent title from wrapping to multiple lines */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis if title overflows */
+}
+
+/* Adjust description positioning */
+.eventdescription {
+  color: #666; /* Subtle gray for descriptions */
+  font-size: 0.9em;
+  margin-top: 5px; /* Reduce space between title and description */
+  flex-grow: 1; /* Ensure the description grows to fill available space */
+  overflow: hidden; /* Prevent overflowing content */
+}
+
+
+/* Hover effect for event title */
+.eventtitle a:hover {
+  color: #d0021b; /* Change text color to NC State red */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+/* Add spacing between rows */
+.cal {
+  width: 100%; /* Ensure table spans the container */
+  border-spacing: 0; /* Remove default table spacing */
+  border-collapse: separate; /* Separate rows */
+  border-spacing: 0 10px; /* Add spacing between rows */
+}
+
+.cal tr {
+  display: table-row; /* Ensure rows stay in the table context */
+  width: 100%; /* Uniform width for all rows */
+  background-color: white; /* Background color for rows */
 }

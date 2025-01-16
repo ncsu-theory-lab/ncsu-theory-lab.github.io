@@ -1,44 +1,33 @@
-import { fetchData } from './loadComponents.js';
+import { fetchData } from './loadComponents.js'; // Assuming this method exists to fetch data from the server or file
 
-export async function renderSeminars() {
-  const events = await fetchData("data/events.json");
-  const container = document.getElementById("seminarsAccordion");
+export async function renderEvents() {
+  const events = await fetchData("data/events.json"); // Fetch event data from the JSON file
+  const container = document.getElementById("eventsList");
   container.innerHTML = ""; // Clear previous content
 
   if (events.length === 0) {
     container.innerHTML = `
-      <div class="accordion-item">
-        <h2 class="accordion-header">
-          <button class="accordion-button" disabled>No upcoming seminars scheduled.</button>
-        </h2>
-      </div>`;
+      <tr>
+        <td colspan="2" class="text-center">No upcoming events scheduled.</td>
+      </tr>
+    `;
     return;
   }
 
-  events.forEach((event, index) => {
-    const card = document.createElement("div");
-    card.className = "accordion-item";
+  events.forEach((event) => {
+    const eventRow = document.createElement("tr");
 
-    card.innerHTML = `
-      <h2 class="accordion-header" id="seminarHeading${index}">
-        <button class="accordion-button collapsed" 
-                type="button" data-bs-toggle="collapse" 
-                data-bs-target="#seminarCollapse${index}" 
-                aria-expanded="false" 
-                aria-controls="seminarCollapse${index}">
-          ${event.title}
-        </button>
-      </h2>
-      <div id="seminarCollapse${index}" 
-           class="accordion-collapse collapse" 
-           aria-labelledby="seminarHeading${index}" 
-           data-bs-parent="#seminarsAccordion">
-        <div class="accordion-body">
-          <strong>Date:</strong> ${event.date}<br>
-          <strong>Description:</strong> ${event.description}
-        </div>
-      </div>
+    eventRow.innerHTML = `
+      <td class="calevent">
+        <span class="eventmonth">${new Date(event.date).toLocaleString('default', { month: 'short' })}</span><br>
+        <span class="monthdate">${new Date(event.date).getDate()}</span>
+      </td>
+      <td class="eventtitle">
+        <a href="${event.link}" target="_blank">${event.title}</a>
+        <span class="eventdescription">${event.description}</span>
+      </td>
     `;
-    container.appendChild(card);
+
+    container.appendChild(eventRow);
   });
 }
