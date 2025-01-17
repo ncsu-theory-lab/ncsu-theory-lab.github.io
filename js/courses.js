@@ -14,15 +14,14 @@ export async function renderCourses() {
   }
 
   courses.forEach((course) => {
-    const listItem = document.createElement("a");
-    listItem.className = "list-group-item list-group-item-action flex-column align-items-start";
+  const listItem = document.createElement("div");
+  listItem.className = "list-group-item";
 
-    listItem.innerHTML = `
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">${course.name}</h5>
-      </div>
-      <p class="mb-1">${course.description}</p>
-    `;
-    container.appendChild(listItem);
-  });
+  listItem.innerHTML = `
+    <h5><a href="${course.link}" target="_blank">${course.name}</a></h5>
+    <p>${course.description}</p>
+  `;
+  container.appendChild(listItem);
+});
+
 }

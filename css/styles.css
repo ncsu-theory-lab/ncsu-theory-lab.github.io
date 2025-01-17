@@ -46,22 +46,6 @@ header h1 {
   font-weight: bold;
 }*/
 
-/* Links styling */
-#links ul {
-  list-style: none;
-  padding: 0;
-}
-
-#links li a {
-  color: #0056b3;
-  text-decoration: none;
-}
-
-#links li a:hover {
-  text-decoration: underline;
-  color: #003d99;
-}
-
 .calevent {
   background-color: #c00; /* NC State red */
   color: white;
@@ -129,4 +113,77 @@ header h1 {
   display: table-row; /* Ensure rows stay in the table context */
   width: 100%; /* Uniform width for all rows */
   background-color: white; /* Background color for rows */
+}
+
+
+/* Courses list item styling */
+.list-group-item {
+  background-color: #f2f2f2; /* Light grey background color */
+  color: #000; /* Black text for descriptions */
+  margin-bottom: 10px; /* Spacing between items */
+  width: 100%; /* Full width for items */
+  display: flex; /* Use flex for vertical alignment */
+  flex-direction: column; /* Stack content vertically */
+  justify-content: flex-start; /* Align content to the top */
+  height: 120px; /* Reduced height for items */
+  padding: 20px; /* Add padding around content */
+  box-sizing: border-box; /* Include padding in the box size */
+  border-radius: 0; /* No rounded corners */
+  border: none; /* No border */
+}
+
+/* Style the course title */
+.list-group-item h5 {
+  margin: 0; /* Remove default margin */
+  font-weight: normal; /* Remove bold styling */
+  font-size: 1rem; /* Adjust font size */
+  margin-bottom: 5px; /* Small space below the title */
+  color: #cc0000; /* Red color for the title */
+  text-transform: uppercase; /* Make the text all caps */
+}
+
+/* Links styling for the title */
+.list-group-item a {
+  text-decoration: none; /* Remove underline */
+  color: #cc0000; /* Default red color for links */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.list-group-item a:hover {
+  color: #990000; /* More intense red on hover */
+  text-decoration: none; /* Ensure no underline on hover */
+}
+
+
+/* Ensure description is close to the title */
+.list-group-item p {
+  margin: 0;
+  color: #666; /* Subtle gray for descriptions */
+  font-size: 0.9rem; /* Slightly smaller text for descriptions */
+  line-height: 1.4; /* Adjust line height for readability */
+}
+
+
+
+
+
+/* Useful Links List */
+#links ul {
+  padding: 0;
+}
+
+#links li {
+  list-style: none;
+  margin-bottom: 8px; /* Add spacing between list items */
+}
+
+#links li a {
+  color: #cc0000; /* Default red color for links */
+  text-decoration: none;
+  font-weight: normal; /* Optional for emphasis */
+}
+
+#links li a:hover {
+  color: #990000; /* More intense red on hover */
+  text-decoration: none; /* Remove underline */
 }
