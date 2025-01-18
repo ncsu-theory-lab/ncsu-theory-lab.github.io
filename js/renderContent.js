@@ -51,9 +51,15 @@ function switchToTab(showId, hideId) {
 
 // Helper function to set the active tab
 function setActiveTab(activeTab) {
-  const tabs = document.querySelectorAll('.nav-link'); // Select all tabs
+  const tabs = document.querySelectorAll('.btn'); // Select all buttons
   tabs.forEach(tab => {
-    tab.classList.remove('active'); // Remove active class from all tabs
+    if (tab === activeTab) {
+      tab.classList.remove('btn-secondary'); // Remove inactive style
+      tab.classList.add('btn-primary');      // Add active style
+    } else {
+      tab.classList.remove('btn-primary');   // Remove active style
+      tab.classList.add('btn-secondary');    // Add inactive style
+    }
   });
-  activeTab.classList.add('active'); // Add active class to the clicked tab
 }
+

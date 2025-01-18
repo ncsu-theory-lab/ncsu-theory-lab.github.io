@@ -21,15 +21,17 @@ header h1 {
 }
 
 /* Tabs spacing and styling */
+/*
 .nav-tabs .nav-link {
-  color: #333; /* Default color for tabs */
+  color: #333;
 }
 
 .nav-tabs .nav-link.active {
-  color: #fff; /* Active tab color */
-  background-color: #d0021b; /* NC State red */
-  border-color: #d0021b; /* Match border color */
+  color: #fff; 
+  background-color: #d0021b;
+  border-color: #d0021b; 
 }
+*/
 
 /* Sidebar sections */
 /*#calendar, #seminars, #courses, #links {
@@ -187,3 +189,11 @@ header h1 {
   color: #990000; /* More intense red on hover */
   text-decoration: none; /* Remove underline */
 }
+
+
+
+.btn:focus {
+  outline: none; /* Remove the focus outline */
+  box-shadow: none; /* Remove any box-shadow applied during focus */
+}
+
