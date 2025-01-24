@@ -1,14 +1,56 @@
 [
   {
-    "name": "Dr. Alice Smith",
+    "name": "Dr. Chin Ho Lee",
+    "photo": "images/bob.jpg",
+    "research": "Complexity Theory, Pseudorandomness",
+    "website": "https://chinholee.github.io"
+  }
+  {
+    "name": "Dr. Abida Haque",
+    "photo": "images/bob.jpg",
+    "research": "Cryptography",
+    "website": "https://"
+  }
+  {
+    "name": "Dr. Steffen Heber",
+    "photo": "images/bob.jpg",
+    "research": "Computational Biology",
+    "website": "https://"
+  }
+  {
+    "name": "Dr. Jamie Jennings",
+    "photo": "images/bob.jpg",
+    "research": "",
+    "website": "https://"
+  }
+  {
+    "name": "Dr. Sharath Raghvendra",
+    "photo": "images/bob.jpg",
+    "research": "Geometry and Machine Learning",
+    "website": "https://www.csc.ncsu.edu/people/skraghve"
+  }
+  {
+    "name": "Dr. Alessandra Scafuro",
+    "photo": "images/bob.jpg",
+    "research": "Cryptography",
+    "website": "https://"
+  }
+  {
+    "name": "Dr. Don Sheehy",
     "photo": "images/alice.jpg",
-    "research": "Quantum Computing, Algorithms",
-    "website": "https://example.com/alice"
+    "research": "Computational Geometry, Topology, Data Structures",
+    "website": "https://donsheehy.net"
   },
   {
-    "name": "Dr. Bob Johnson",
+    "name": "Dr. Matt Stallmann",
+    "photo": "images/matt_stallamnn.jpg",
+    "research": "Algorithmic Experiments and Visualization",
+    "website": "https://mfms.wordpress.ncsu.edu"
+  }
+  {
+    "name": "Dr. Sharma Thankachan",
     "photo": "images/bob.jpg",
-    "research": "Machine Learning, Complexity Theory",
-    "website": "https://example.com/bob"
+    "research": "String Algorithms",
+    "website": "https://www.csc.ncsu.edu/people/svalliy"
   }
 ]
