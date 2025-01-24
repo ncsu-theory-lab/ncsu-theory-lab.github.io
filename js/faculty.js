@@ -18,7 +18,7 @@ export async function renderFaculty() {
     }
 
     const deck = document.createElement("div");
-    deck.className = "card-deck"; // Bootstrap card-deck for a cohesive layout
+    deck.className = "card-columns"; // Bootstrap card-deck for a cohesive layout
 
     data.forEach((person) => {
       const card = document.createElement("div");
