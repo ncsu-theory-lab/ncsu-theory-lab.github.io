@@ -43,7 +43,7 @@
   },
   {
     "name": "Dr. Matt Stallmann",
-    "photo": "images/matt_stallamnn.jpg",
+    "photo": "images/matt_stallmann.jpg",
     "research": "Algorithmic Experiments and Visualization",
     "website": "https://mfms.wordpress.ncsu.edu"
   },
@@ -52,5 +52,5 @@
     "photo": "images/bob.jpg",
     "research": "String Algorithms",
     "website": "https://www.csc.ncsu.edu/people/svalliy"
-  }.
+  },
 ]
