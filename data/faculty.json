@@ -1,43 +1,43 @@
 [
   {
     "name": "Dr. Chin Ho Lee",
-    "photo": "images/bob.jpg",
+    "photo": "images/chin_ho_lee.jpg",
     "research": "Complexity Theory, Pseudorandomness",
     "website": "https://chinholee.github.io"
   },
   {
     "name": "Dr. Abida Haque",
-    "photo": "images/bob.jpg",
+    "photo": "images/abida_haque.jpg",
     "research": "Cryptography",
-    "website": "https://"
+    "website": "https://haqueabida.github.io"
   },
   {
     "name": "Dr. Steffen Heber",
-    "photo": "images/bob.jpg",
+    "photo": "images/steffen_heber.jpg",
     "research": "Computational Biology",
-    "website": "https://"
+    "website": "https://sheber.wordpress.ncsu.edu/"
   },
   {
     "name": "Dr. Jamie Jennings",
-    "photo": "images/bob.jpg",
-    "research": "",
-    "website": "https://"
+    "photo": "images/jamie_jennings.jpg",
+    "research": "Algoirthms, Programming Languages",
+    "website": "https://jamiejennings.com/"
   },
   {
     "name": "Dr. Sharath Raghvendra",
-    "photo": "images/bob.jpg",
+    "photo": "images/sharath_raghvendra.jpg",
     "research": "Geometry and Machine Learning",
     "website": "https://www.csc.ncsu.edu/people/skraghve"
   },
   {
     "name": "Dr. Alessandra Scafuro",
-    "photo": "images/bob.jpg",
+    "photo": "images/alessandra_scafuro.jpg",
     "research": "Cryptography",
-    "website": "https://"
+    "website": "https://sites.google.com/ncsu.edu/ascafuro/"
   },
   {
     "name": "Dr. Don Sheehy",
-    "photo": "images/alice.jpg",
+    "photo": "images/don_sheehy.jpg",
     "research": "Computational Geometry, Topology, Data Structures",
     "website": "https://donsheehy.net"
   },
@@ -49,7 +49,7 @@
   },
   {
     "name": "Dr. Sharma Thankachan",
-    "photo": "images/bob.jpg",
+    "photo": "images/sharma_thankachan.jpg",
     "research": "String Algorithms",
     "website": "https://www.csc.ncsu.edu/people/svalliy"
   }
