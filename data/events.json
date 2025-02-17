@@ -1,20 +1,14 @@
 [
   {
-    "title": "Code Black Kickoff Event",
-    "date": "2025-01-21T00:00:00Z",
-    "link": "https://www.google.com/calendar/event?eid=event1",
-    "description": "Join us to explore coding challenges and networking opportunities!"
+    "title": "Ants on Manifolds",
+    "date": "2025-02-21T10:00:00Z",
+    "speaker": "Oliver Chubet",
+    "venue": "3233 EB II"
   },
   {
-    "title": "WiCS: Spring Edition",
-    "date": "2025-01-21T00:00:00Z",
-    "link": "https://www.google.com/calendar/event?eid=event2",
-    "description": "Celebrating women in computer science this spring."
-  },
-  {
-    "title": "LA/CSC Kickoff Event",
-    "date": "2025-01-22T00:00:00Z",
-    "link": "https://www.google.com/calendar/event?eid=event3",
-    "description": "Learn about upcoming LA/CSC activities for the semester."
+    "title": "Algorithmic Approaches to Bar Fight Prevention",
+    "date": "2025-02-28T10:00:00Z",
+    "speaker": "Mano Prakash Parthasarathi",
+    "venue": "3233 EB II"
   }
 ]

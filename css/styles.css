@@ -84,11 +84,20 @@ header h1 {
   line-height: 1.2em; /* Adjust line height for better spacing */
   white-space: nowrap; /* Prevent title from wrapping to multiple lines */
   overflow: hidden;
-  text-overflow: ellipsis; /* Add ellipsis if title overflows */
+  text-wrap: auto;
+}
+
+/* Adjust speaker positioning */
+.eventspeaker {
+  color: #000; /* Black font color for speaker name */
+  font-size: 0.9em;
+  margin-top: 5px; /* Reduce space between title and description */
+  flex-grow: 1; /* Ensure the description grows to fill available space */
+  overflow: hidden; /* Prevent overflowing content */
 }
 
 /* Adjust description positioning */
-.eventdescription {
+.eventvenue {
   color: #666; /* Subtle gray for descriptions */
   font-size: 0.9em;
   margin-top: 5px; /* Reduce space between title and description */
