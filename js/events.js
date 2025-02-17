@@ -24,7 +24,7 @@ export async function renderEvents() {
         <span class="monthdate">${new Date(event.date).getDate()}</span>
       </td>
       <td class="eventtitle">
-        <a href="${event.link}" target="_blank">${event.title}</a>
+        <a>${event.title}</a>
         <span class="eventspeaker">${event.speaker}</span>
         <span class="eventvenue">${formatAMPM(new Date(event.date))} | ${event.venue}</span>
       </td>
