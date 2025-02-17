@@ -1,4 +1,5 @@
 import { fetchData } from './loadComponents.js'; // Assuming this method exists to fetch data from the server or file
+import { formatAMPM } from './util.js'; 
 
 export async function renderEvents() {
   const events = await fetchData("data/events.json"); // Fetch event data from the JSON file
@@ -24,7 +25,8 @@ export async function renderEvents() {
       </td>
       <td class="eventtitle">
         <a href="${event.link}" target="_blank">${event.title}</a>
-        <span class="eventdescription">${event.description}</span>
+        <span class="eventspeaker">${event.speaker}</span>
+        <span class="eventvenue">${formatAMPM(new Date(event.date))} | ${event.venue}</span>
       </td>
     `;
 
