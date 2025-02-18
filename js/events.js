@@ -26,6 +26,7 @@ export async function renderEvents() {
       <td class="eventtitle">
         <div class="title-container" data-tooltip="${event.abstract}">
           <a>${event.title}</a>
+          <button class="info-button" id="infoButton">i</button>
           <span class="eventspeaker">${event.speaker}</span>
           <span class="eventvenue">${formatAMPM(new Date(event.date))} | ${event.venue}</span>
         </div>

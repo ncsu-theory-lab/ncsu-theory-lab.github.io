@@ -235,3 +235,24 @@ header h1 {
   box-shadow: none; /* Remove any box-shadow applied during focus */
 }
 
+.info-button {
+  background-color: #c00; /* Red background */
+  color: #ffffff; /* White text */
+  border: none;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 20px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.info-button:hover {
+  background-color: #cc0000; /* Darker red on hover */
+}
+
+.info-button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(204, 0, 0, 0.5); /* Subtle focus ring */
+}
