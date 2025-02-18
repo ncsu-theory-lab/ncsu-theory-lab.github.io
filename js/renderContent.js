@@ -63,3 +63,62 @@ function setActiveTab(activeTab) {
   });
 }
 
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.addEventListener('mouseover', function(event) {
+      const titleContainer = event.target.closest('.title-container');
+      if (titleContainer) {
+          const tooltip = document.createElement('div');
+          tooltip.className = 'tooltip';
+          tooltip.textContent = titleContainer.getAttribute('data-tooltip');
+          titleContainer.appendChild(tooltip);
+          // const rect = titleContainer.getBoundingClientRect();
+
+          positionTooltip(tooltip, titleContainer);
+      }
+  });
+
+  document.body.addEventListener('mouseout', function(event) {
+      const titleContainer = event.target.closest('.title-container');
+      if (titleContainer) {
+          const tooltip = titleContainer.querySelector('.tooltip');
+          if (tooltip) {
+              tooltip.remove();
+          }
+      }
+  });
+
+  /* To position the tooltip for displaying abstract */
+  function positionTooltip(tooltip, target) {
+    const rect = target.getBoundingClientRect();
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+
+    // Set initial width
+    tooltip.style.width = 'auto'; // Reset to auto to measure content width
+    const contentWidth = tooltip.offsetWidth;
+    tooltip.style.width = `${Math.min(contentWidth, 400)}px`; // Set width, max 300px
+
+    // Calculate percentage positions
+    let topPercentage = (rect.top / viewportHeight) * 100;
+    let leftPixels = rect.left - tooltip.offsetWidth - 80; // 80px further to the left
+
+    // Adjust if tooltip goes off-screen to the left
+    if (leftPixels < 0) {
+      // Position to the right of the container instead
+      leftPixels = rect.right + 80; // 80px to the right
+    }
+
+    // Convert left position to percentage
+    let leftPercentage = (leftPixels / viewportWidth) * 100;
+
+    // Adjust if tooltip goes off-screen vertically
+    const tooltipRect = tooltip.getBoundingClientRect();
+    if (rect.top + tooltipRect.height > viewportHeight) {
+      topPercentage = ((viewportHeight - tooltipRect.height) / viewportHeight) * 100;
+    }
+
+    // Set final position
+    tooltip.style.top = `${topPercentage}%`;
+    tooltip.style.left = `${leftPercentage}%`;
+  }
+});
