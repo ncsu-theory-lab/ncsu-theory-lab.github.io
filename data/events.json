@@ -3,12 +3,14 @@
     "title": "Ants on Manifolds",
     "date": "2025-02-21T10:00:00Z",
     "speaker": "Oliver Chubet",
-    "venue": "3233 EB II"
+    "venue": "3233 EB II",
+    "abstract": "Starting with some counterintuitive results of Cantor and Netto, we will revisit classic results of proximity, continuity, and measures of curves on manifolds. We will then discuss the impact of these results on geometric data structures of the present."
   },
   {
     "title": "Algorithmic Approaches to Bar Fight Prevention",
     "date": "2025-02-28T10:00:00Z",
     "speaker": "Mano Prakash Parthasarathi",
-    "venue": "3233 EB II"
+    "venue": "3233 EB II",
+    "abstract": "In this talk, I shall state the 'Bar fight prevention' problem, which is nothing but the classical vertex cover problem in graph theory. We start from a naive approach, and progressively develop algorithms through 8 stages of refinement. Also, we explore 2 counterproductive ways, illustrating potential pitfalls to avoid in certain variations of the Bar fight prevention problem. This journey leads us to the realm of Parameterized algorithms, highlighting their significance in tackling practical optimization problems. The talk is self-contained."
   }
 ]
