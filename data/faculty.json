@@ -1,54 +1,54 @@
 [
   {
-    "name": "Dr. Chin Ho Lee",
-    "photo": "images/chin_ho_lee.jpg",
-    "research": "Complexity Theory, Pseudorandomness",
-    "website": "https://chinholee.github.io"
-  },
-  {
-    "name": "Dr. Abida Haque",
+    "name": "Abida Haque",
     "photo": "images/abida_haque.jpg",
     "research": "Cryptography",
     "website": "https://haqueabida.github.io"
   },
   {
-    "name": "Dr. Steffen Heber",
+    "name": "Chin Ho Lee",
+    "photo": "images/chin_ho_lee.jpg",
+    "research": "Complexity Theory, Pseudorandomness",
+    "website": "https://chinholee.github.io"
+  },
+  {
+    "name": "Steffen Heber",
     "photo": "images/steffen_heber.jpg",
     "research": "Computational Biology",
     "website": "https://sheber.wordpress.ncsu.edu/"
   },
   {
-    "name": "Dr. Jamie Jennings",
+    "name": "Jamie Jennings",
     "photo": "images/jamie_jennings.jpg",
     "research": "Algorithms, Programming Languages",
     "website": "https://jamiejennings.com/"
   },
   {
-    "name": "Dr. Sharath Raghvendra",
+    "name": "Sharath Raghvendra",
     "photo": "images/sharath_raghvendra.jpg",
     "research": "Geometry and Machine Learning",
     "website": "https://www.csc.ncsu.edu/people/skraghve"
   },
   {
-    "name": "Dr. Alessandra Scafuro",
+    "name": "Alessandra Scafuro",
     "photo": "images/alessandra_scafuro.jpg",
     "research": "Cryptography",
     "website": "https://sites.google.com/ncsu.edu/ascafuro/"
   },
   {
-    "name": "Dr. Don Sheehy",
+    "name": "Don Sheehy",
     "photo": "images/don_sheehy.jpg",
     "research": "Computational Geometry, Topology, Data Structures",
     "website": "https://donsheehy.net"
   },
   {
-    "name": "Dr. Matt Stallmann",
+    "name": "Matt Stallmann",
     "photo": "images/matt_stallmann.jpg",
     "research": "Algorithmic Experiments and Visualization",
     "website": "https://mfms.wordpress.ncsu.edu"
   },
   {
-    "name": "Dr. Sharma Thankachan",
+    "name": "Sharma Thankachan",
     "photo": "images/sharma_thankachan.jpg",
     "research": "String Algorithms",
     "website": "https://www.csc.ncsu.edu/people/svalliy"
