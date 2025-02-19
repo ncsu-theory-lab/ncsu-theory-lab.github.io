@@ -256,3 +256,20 @@ header h1 {
   outline: none;
   box-shadow: 0 0 0 2px rgba(204, 0, 0, 0.5); /* Subtle focus ring */
 }
+
+@media (max-width: 767px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+  .col {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  object-position: 20% 30%; /* Adjusts which part of the image is visible */
+}

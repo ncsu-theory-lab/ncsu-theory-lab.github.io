@@ -27,13 +27,13 @@ export async function renderFaculty() {
       {
         // Start a new row every 3 faculty members
         currentRow = document.createElement('div');
-        currentRow.className = 'row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-4';
+        currentRow.className = 'row g-4 mb-4';
         deck.appendChild(currentRow); // Append each row to the deck
       }
 
       // Individual card with margin
       const card = document.createElement('div');
-      card.className = 'col';
+      card.className = 'col-12 col-md-6 col-lg-4 mb-4';
       
       card.innerHTML = `
         <div class="card h-100">
