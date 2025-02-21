@@ -18,21 +18,27 @@ export async function renderEvents() {
   events.forEach((event) => {
     const eventRow = document.createElement("tr");
 
-    eventRow.innerHTML = `
-      <td class="calevent">
-        <span class="eventmonth">${new Date(event.date).toLocaleString('default', { month: 'short' })}</span><br>
-        <span class="monthdate">${new Date(event.date).getDate()}</span>
-      </td>
-      <td class="eventtitle">
-        <div class="title-container" data-tooltip="${event.abstract}">
-          <a>${event.title}</a>
-          <button class="info-button" id="infoButton">i</button>
-          <span class="eventspeaker">${event.speaker}</span>
-          <span class="eventvenue">${formatAMPM(new Date(event.date))} | ${event.venue}</span>
-        </div>
-      </td>
-    `;
+    const currentDate = new Date(new Date().getTime() - (2 * 60 * 60 * 1000));
+    const eventDate = new Date(event.date);
 
-    container.appendChild(eventRow);
+    if(currentDate <= eventDate)
+    {
+      eventRow.innerHTML = `
+        <td class="calevent">
+          <span class="eventmonth">${eventDate.toLocaleString('default', { month: 'short' })}</span><br>
+          <span class="monthdate">${eventDate.getDate()}</span>
+        </td>
+        <td class="eventtitle">
+          <div class="title-container" data-tooltip="${event.abstract}">
+            <a>${event.title}</a>
+            <button class="info-button" id="infoButton">i</button>
+            <span class="eventspeaker">${event.speaker}</span>
+            <span class="eventvenue">${formatAMPM(new Date(event.date))} | ${event.venue}</span>
+          </div>
+        </td>
+      `;
+
+      container.appendChild(eventRow);
+    }
   });
 }
