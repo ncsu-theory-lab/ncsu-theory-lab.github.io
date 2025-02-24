@@ -2,8 +2,8 @@ import { fetchData } from './loadComponents.js'; // Import fetchData function
 
 export async function renderStudents() {
   try {
-    const data = await fetchData("data/students.json"); // Fetch student data
-    const container = document.getElementById("students-content");
+    const data = await fetchData("data/students.json"); // Fetch faculty data
+    const container = document.getElementById("students-content-container");
 
     if (!container) {
       console.error("Content container not found.");
@@ -13,34 +13,48 @@ export async function renderStudents() {
     container.innerHTML = ""; // Clear previous content
 
     if (data.length === 0) {
-      container.innerHTML = "<p>No students found.</p>"; // Handle empty data gracefully
+      container.innerHTML = "<p>No student members found.</p>"; // Handle empty data gracefully
       return;
     }
 
     const deck = document.createElement("div");
-    deck.className = "card-deck"; // Bootstrap card-deck for a cohesive layout
+    deck.className = "card-rows"; // Bootstrap card-deck for a cohesive layout
 
-    data.forEach((person) => {
-      const card = document.createElement("div");
-      card.className = "card mb-4"; // Individual card with margin
+    let currentRow;
 
+    data.forEach((person, index) => {
+      if (index % 3 === 0)
+      {
+        // Start a new row every 3 faculty members
+        currentRow = document.createElement('div');
+        currentRow.className = 'row g-4 mb-4';
+        deck.appendChild(currentRow); // Append each row to the deck
+      }
+
+      // Individual card with margin
+      const card = document.createElement('div');
+      card.className = 'col-12 col-md-6 col-lg-4 mb-4';
+      
       card.innerHTML = `
-        <img src="${person.photo}" class="card-img-top" alt="${person.name}" style="height: 200px; object-fit: cover;">
-        <div class="card-body text-center">
-          <h5 class="card-title">${person.name}</h5> <!-- Name as the card title, centered -->
-          <p class="card-text mt-2">Research: ${person.research}</p> <!-- Research as card text -->
-        </div>
-        <div class="card-footer text-center">
-          <a href="${person.website}" target="_blank" class="btn btn-primary">Go to Website</a> <!-- Button for the website link -->
+        <div class="card h-100">
+          <img src="${person.photo}" class="card-img-top" alt="${person.name}" style="height: 200px; object-fit: cover;">
+          <div class="card-body text-center">
+          <h5 class="card-title">
+            <a href="${person.website}" target="_blank">${person.name}</a>
+          </h5> <!-- Name as the card title, centered -->
+          <p class="card-text mt-2">${person.research}</p> <!-- Research as card text -->
         </div>
       `;
 
-      deck.appendChild(card); // Append each card to the card-deck
+      currentRow.appendChild(card); // Append each card to the current-row
     });
 
     container.appendChild(deck); // Append the card deck to the content container
   } catch (error) {
     console.error("Error rendering student content:", error);
-    container.innerHTML = "<p>Error loading student data. Please try again later.</p>";
+    const container = document.getElementById("students-content-container");
+    if (container) {
+      container.innerHTML = "<p>Error loading student data. Please try again later.</p>";
+    }
   }
 }

@@ -1,14 +1,26 @@
 [
   {
-    "name": "Jane Doe",
-    "photo": "images/jane.jpg",
-    "research": "Cryptography",
-    "website": "https://example.com/jane"
+    "name": "Oliver Chubet",
+    "photo": "images/oliver.jpg",
+    "research": "Topology, Computational Geometry",
+    "website": "https://oliverchubet.github.io/"
   },
   {
-    "name": "John Doe",
-    "photo": "images/john.jpg",
-    "research": "Distributed Systems",
-    "website": "https://example.com/john"
+    "name": "Mano Prakash Parthasarathi",
+    "photo": "images/mano.jpg",
+    "research": "String Algorithms, Graph Algorithms",
+    "website": "https://manoprakash6.github.io"
+  },
+  {
+    "name": "Emma Saarinen",
+    "photo": "images/jane.jpg",
+    "research": "Geometry and Machine Learning",
+    "website": ""
+  },
+  {
+    "name": "Siddharth Sheth",
+    "photo": "images/sid.jpg",
+    "research": "Computational Geometry",
+    "website": "https://www.linkedin.com/in/siddharth-sheth-76153b32/"
   }
 ]
