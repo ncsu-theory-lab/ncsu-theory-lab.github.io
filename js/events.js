@@ -32,7 +32,7 @@ export async function renderEvents() {
           <div class="title-container" data-tooltip="${event.abstract}">
             <a>${event.title}</a>
             <button class="info-button" id="infoButton">i</button>
-            <span class="eventspeaker">${event.speaker}</span>
+            <span class="eventspeaker"><a href="${event.speaker_profile}" target="_blank">${event.speaker}</a></span>
             <span class="eventvenue">${formatAMPM(new Date(event.date))} | ${event.venue}</span>
           </div>
         </td>
