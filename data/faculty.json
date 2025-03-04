@@ -6,34 +6,16 @@
     "website": "https://haqueabida.github.io"
   },
   {
-    "name": "Chin Ho Lee",
-    "photo": "images/chin_ho_lee.jpg",
-    "research": "Complexity Theory, Pseudorandomness",
-    "website": "https://chinholee.github.io"
-  },
-  {
-    "name": "Steffen Heber",
-    "photo": "images/steffen_heber.jpg",
-    "research": "Computational Biology",
-    "website": "https://sheber.wordpress.ncsu.edu/"
-  },
-  {
-    "name": "Jamie Jennings",
-    "photo": "images/jamie_jennings.jpg",
-    "research": "Algorithms, Programming Languages",
-    "website": "https://jamiejennings.com/"
-  },
-  {
-    "name": "Sharath Raghvendra",
-    "photo": "images/sharath_raghvendra.jpg",
-    "research": "Geometry and Machine Learning",
-    "website": "https://www.csc.ncsu.edu/people/skraghve"
-  },
-  {
     "name": "Alessandra Scafuro",
     "photo": "images/alessandra_scafuro.jpg",
     "research": "Cryptography",
     "website": "https://sites.google.com/ncsu.edu/ascafuro/"
+  },
+  {
+    "name": "Chin Ho Lee",
+    "photo": "images/chin_ho_lee.jpg",
+    "research": "Complexity Theory, Pseudorandomness",
+    "website": "https://chinholee.github.io"
   },
   {
     "name": "Don Sheehy",
@@ -42,15 +24,33 @@
     "website": "https://donsheehy.net"
   },
   {
+    "name": "Jamie Jennings",
+    "photo": "images/jamie_jennings.jpg",
+    "research": "Algorithms, Programming Languages",
+    "website": "https://jamiejennings.com/"
+  },
+  {
     "name": "Matt Stallmann",
     "photo": "images/matt_stallmann.jpg",
     "research": "Algorithmic Experiments and Visualization",
     "website": "https://mfms.wordpress.ncsu.edu"
   },
   {
+    "name": "Sharath Raghvendra",
+    "photo": "images/sharath_raghvendra.jpg",
+    "research": "Geometry and Machine Learning",
+    "website": "https://www.csc.ncsu.edu/people/skraghve"
+  },
+  {
     "name": "Sharma Thankachan",
     "photo": "images/sharma_thankachan.jpg",
     "research": "String Algorithms",
     "website": "https://www.csc.ncsu.edu/people/svalliy"
+  },
+  {
+    "name": "Steffen Heber",
+    "photo": "images/steffen_heber.jpg",
+    "research": "Computational Biology",
+    "website": "https://sheber.wordpress.ncsu.edu/"
   }
 ]
