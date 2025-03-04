@@ -14,5 +14,13 @@
     "venue": "3233 EB II",
     "abstract": "In this talk, I shall state the 'Bar fight prevention' problem, which is nothing but the classical vertex cover problem in graph theory. We start from a naive approach, and progressively develop algorithms through 8 stages of refinement. Also, we explore 2 counterproductive ways, illustrating potential pitfalls to avoid in certain variations of the Bar fight prevention problem. This journey leads us to the realm of Parameterized algorithms, highlighting their significance in tackling practical optimization problems. The talk is self-contained.",
     "speaker_profile": "https://manoprakash6.github.io"
+  },
+  {
+    "title": "Solving linear equations w/o Gaussian elimination",
+    "date": "2025-03-07T10:00:00",
+    "speaker": "Chin Ho Lee",
+    "venue": "3233 EB II",
+    "abstract": "Solving systems of linear equations is a fundamental problem, and Gaussian elimination is the standard solution. While there are alternatives for solving linear equations over real numbers, for a long time, Gaussian elimination remained the only known algorithm for solving linear equations modulo 2.  In 2012, Prasad Raghavendra came up with a simple yet ingenious approach for this problem.  In this talk, I will explain how his algorithm works.",
+    "speaker_profile": "https://chinholee.github.io"
   }
 ]
