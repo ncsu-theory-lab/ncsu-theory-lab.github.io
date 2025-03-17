@@ -22,5 +22,13 @@
     "venue": "3233 EB II",
     "abstract": "Solving systems of linear equations is a fundamental problem, and Gaussian elimination is the standard solution. While there are alternatives for solving linear equations over real numbers, for a long time, Gaussian elimination remained the only known algorithm for solving linear equations modulo 2.  In 2012, Prasad Raghavendra came up with a simple yet ingenious approach for this problem.  In this talk, I will explain how his algorithm works.",
     "speaker_profile": "https://chinholee.github.io"
+  },
+  {
+    "title": "Clique-Based Separators for Geom. Intersection Graphs",
+    "date": "2025-03-21T11:00:00",
+    "speaker": "Siddharth Sheth",
+    "venue": "3233 EB II",
+    "abstract": "Clique-based separators are a generalization of separators recently developed by de Berg et al. For certain classes of geometric graphs, these separators can be used to develop sub-exponential time algorithms for NP-complete problems. We will go over their construction, some properties, and use them to solve maximum independent set, dominating set, and q-Coloring.",
+    "speaker_profile": "https://www.linkedin.com/in/siddharth-sheth-76153b32/"
   }
 ]
