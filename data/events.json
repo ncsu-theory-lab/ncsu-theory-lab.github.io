@@ -30,5 +30,13 @@
     "venue": "3233 EB II",
     "abstract": "Clique-based separators are a generalization of separators recently developed by de Berg et al. For certain classes of geometric graphs, these separators can be used to develop sub-exponential time algorithms for NP-complete problems. We will go over their construction, some properties, and use them to solve maximum independent set, dominating set, and q-Coloring.",
     "speaker_profile": "https://www.linkedin.com/in/siddharth-sheth-76153b32/"
+  },
+  {
+    "title": "Maximal Matchings with a Random. Parallel Algorithm",
+    "date": "2025-03-28T11:00:00",
+    "speaker": "Emma Saarinen",
+    "venue": "3233 EB II",
+    "abstract": "While the best known greedy and deterministic algorithms for finding maximal matchings on a graph in parallel take polylogarithmic time, Israeli and Itai introduced a randomized algorithm in their 1986 paper “A Fast and Simple Randomized Parallel Algorithm for Maximal Matching” with a running time which is logarithmic in the number of processors (E) (I.e. log|E|). In this talk we will present the core algorithm and results from Israeli and Itai’s paper along with the necessary graph-theoretic and statistical proofs. We will discuss potential adaptation or extension of the algorithm to bipartite settings.",
+    "speaker_profile": "https://ncsu-theory-lab.github.io/"
   }
 ]
