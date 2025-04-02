@@ -38,5 +38,13 @@
     "venue": "3233 EB II",
     "abstract": "While the best known greedy and deterministic algorithms for finding maximal matchings on a graph in parallel take polylogarithmic time, Israeli and Itai introduced a randomized algorithm in their 1986 paper “A Fast and Simple Randomized Parallel Algorithm for Maximal Matching” with a running time which is logarithmic in the number of processors (E) (I.e. log|E|). In this talk we will present the core algorithm and results from Israeli and Itai’s paper along with the necessary graph-theoretic and statistical proofs. We will discuss potential adaptation or extension of the algorithm to bipartite settings.",
     "speaker_profile": "https://ncsu-theory-lab.github.io/"
+  },
+  {
+    "title": "Metric decomposition with applications to graph algos",
+    "date": "2025-04-04T11:00:00",
+    "speaker": "Sharath Raghvendra",
+    "venue": "3233 EB II",
+    "abstract": "Consider a finite metric space with n points equipped with a distance function d. Given an integer p >1, consider a complete graph on the n points where each edge between two points has a cost equal to the pth power of the distance between them. I will adapt the existing metric decomposition techniques to approximate all pairs shortest path on this complete graph in O(n^2 polylog n) time.",
+    "speaker_profile": "https://www.csc.ncsu.edu/people/skraghve"
   }
 ]
