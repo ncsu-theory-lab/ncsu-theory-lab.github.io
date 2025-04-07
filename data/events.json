@@ -46,5 +46,13 @@
     "venue": "3233 EB II",
     "abstract": "Consider a finite metric space with n points equipped with a distance function d. Given an integer p >1, consider a complete graph on the n points where each edge between two points has a cost equal to the pth power of the distance between them. I will adapt the existing metric decomposition techniques to approximate all pairs shortest path on this complete graph in O(n^2 polylog n) time.",
     "speaker_profile": "https://www.csc.ncsu.edu/people/skraghve"
+  },
+  {
+    "title": "Graph Profiling for the Vertex Cover Problem",
+    "date": "2025-04-11T11:00:00",
+    "speaker": "Matt Stallmann",
+    "venue": "3233 EB II",
+    "abstract": "Akiba and Iwata [TCS, 2016] demonstrated that a branch and reduce (B&R) solver for the vertex cover problem can compete favorably with integer linear programming solvers (e.g., CPLEX). Given a well-engineered B&R solver that takes a set of reductions to apply as input, our research question was: Are there graph characteristics that determine which reductions will be most effective? Not only is the answer affirmative, but the relevant characteristics are easy to identify and compute. In order to explore our ideas rigorously, we provided an enhanced implementation of the Akiba-Iwata solver so that it can (a) be configured with any subset of reductions and any applicable lower bounds; (b) print statistics such as time taken and number of vertices reduced by each reduction type; and (c) print trace information with additional details. In this presentation, I will give an overview of how a branch and reduce solver works, demonstrate some of the more straightforward reductions on example graphs, and present some of our most compelling results.",
+    "speaker_profile": "https://mfms.wordpress.ncsu.edu"
   }
 ]
