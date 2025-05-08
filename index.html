@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CS Theory @ NCSU</title>
 
-  <!-- NC State Bootstrap CSS -->
-  <link href="https://cdn.ncsu.edu/brand-assets/bootstrap-4/css/bootstrap.min.css" rel="stylesheet">
-  
-  <!-- Roboto Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700&family=Roboto+Slab:wght@300;400;700&family=Roboto:ital,wght@0,300;0,400;0,700&display=swap" rel="stylesheet">
+  <!-- NC State Bootstrap CSS 
+  <link href="https://cdn.ncsu.edu/brand-assets/bootstrap-4/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+
+  <link rel="preconnect" href="https://rsms.me/">
+<link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
   <!-- Custom Styles -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
 
   <!-- Render Content JS -->
   <script type="module" src="js/renderContent.js" defer></script>
@@ -26,22 +27,28 @@
   <!-- Page Container with Header -->
   <div class="page-container">
     <!-- Header -->
-    <header class="text-center">
-      <h1 class="navbar-brand text-black py-4">CS Theory Lab</h1>
+    <header class="text-left">
+      <h1 class="mt-4 mt-xl-0">CS Theory at NCSU</h1>
     </header>
 
     <div class="row">
       <div class="col-lg-8">
         <!-- About Section -->
-        <div id="about-content" class="mt-3"></div>
+        <div>
+          <p>The Computer Science Theory group at NC State University focuses on the fundamental principles of computation, exploring the limits of what can be computed and the efficiency of algorithms. Our active research areas include computational geometry, string algorithms, the role of randomness in computation, cryptography, and computational biology.</p>
+
+          <p>If you would like to join our group as a graduate student, please apply to the <a href="https://www.csc.ncsu.edu/academics/graduate/degrees/phd.php">PhD program</a> in Computer Science at NCSU.</p>
+
+          <p>To learn more about upcoming theory events, you can subscribe to the theory group <a href="https://groups.google.com/a/lists.ncsu.edu/g/csc-theory/">mailing list</a>.
+        </div>
 
         <!-- Navigation Tabs -->
         <ul class="nav nav-tabs">
           <li class="nav-item">
-            <button class="btn btn-primary" id="faculty-tab" type="button">Faculty</button>
+            <button class="btn btn-dark rounded-0 border-light" id="faculty-tab" type="button">Faculty</button>
           </li>
           <li class="nav-item">
-            <button class="btn btn-secondary" id="students-tab" type="button">Students</button>
+            <button class="btn btn-dark rounded-0 border-light" id="students-tab" type="button">Students</button>
           </li>
         </ul>
 
@@ -60,36 +67,25 @@
 
       <div class="col-lg-4">
         <!-- Sidebar Components -->
-        <!-- <div id="calendar" class="mb-4">
-          <h5>Calendar</h5>
-          <iframe 
-            src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&ctz=America%2FNew_York" 
-            style="border: 0" width="100%" height="300" frameborder="0" scrolling="no">
-          </iframe>
-        </div> -->
-
-        <div id="eventlist" class="table-responsive mb-4">
+        <div id="eventsList">
           <h5>Upcoming Events</h5>
-          <table class="cal">
-            <tbody id="eventsList"></tbody> <!-- Dynamic content will be added here -->
-          </table>
+          <ul id="events"></ul>
         </div>
 
-        <div id="courses" class="mb-4">
-          <h5>Courses</h5>
-          <div class="list-group" id="coursesList"></div>
+        <div id="coursesList">
+          <h5>Courses (Fall 25)</h5>
+          <ul id="courses"></ul>
         </div>
 
-        <div id="linksList" class="mb-4">
+        <div id="linksList">
           <h5>Useful Links</h5>
-          <div id="links"></div>
+          <ul id="links"></ul>
         </div>
-        
       </div>
     </div>
   </div>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.ncsu.edu/brand-assets/bootstrap-4/js/bootstrap.min.js" defer></script>
+  <!-- Bootstrap JS
+  <script src="https://cdn.ncsu.edu/brand-assets/bootstrap-4/js/bootstrap.min.js" defer></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

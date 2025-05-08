@@ -5,7 +5,7 @@ import { renderLinks } from './links.js';
 
 export async function loadComponents() {
   try {
-    renderAbout(); // Render the About section
+    // renderAbout(); // Render the About section
     await renderEvents(); // Load seminars
     await renderCourses(); // Load courses
     await renderLinks();

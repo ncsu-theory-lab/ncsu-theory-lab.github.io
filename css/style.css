@@ -1,0 +1,91 @@
+/* Apply consistent styling across the site */
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Inter, sans-serif;
+  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+}
+
+.page-container {
+  max-width: 1200px;
+  margin: 0 auto; /* Center content horizontally */
+  padding: 20px;
+}
+
+
+.nav-tabs .nav-link.active {
+  color: #fff; 
+  background-color: #d0021b;
+  border-color: #d0021b; 
+}
+
+
+ul {
+  padding-top: 0;
+  padding-left: 20px;
+}
+
+li {
+  list-style-type: disc;
+  margin-bottom: 2px; /* Add spacing between list items */
+}
+
+a {
+  color: #cc0000; /* Default red color for links */
+  text-decoration: none;
+  font-weight: normal; /* Optional for emphasis */
+}
+
+a:hover {
+  color: #990000; /* More intense red on hover */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Optional for emphasis */
+}
+
+.nav-item{
+  list-style-type: none;
+}
+
+.btn {
+  background-color: #cc0000;
+}
+.btn:hover {
+  background-color: #990000; /* More intense red on hover */
+}
+
+.btn:focus {
+  outline: none; /* Remove the focus outline */
+  box-shadow: none; /* Remove any box-shadow applied during focus */
+}
+
+/*
+@media (max-width: 767px) {
+  .card {
+    margin-bottom: 1rem;
+  }
+  .col {
+    display: flex;
+    justify-content: center;
+  }
+}
+*/
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card {
+  width: 200px;
+  /* flex: 1 0 auto; */
+}
+
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  object-position: 20% 30%; /* Adjusts which part of the image is visible */
+}

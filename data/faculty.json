@@ -1,56 +1,56 @@
 [
   {
     "name": "Abida Haque",
-    "photo": "images/abida_haque.jpg",
+    "photo": "images/haque.jpg",
     "research": "Cryptography",
     "website": "https://haqueabida.github.io"
   },
   {
-    "name": "Alessandra Scafuro",
-    "photo": "images/alessandra_scafuro.jpg",
-    "research": "Cryptography",
-    "website": "https://sites.google.com/ncsu.edu/ascafuro/"
-  },
-  {
-    "name": "Chin Ho Lee",
-    "photo": "images/chin_ho_lee.jpg",
-    "research": "Complexity Theory, Pseudorandomness",
-    "website": "https://chinholee.github.io"
-  },
-  {
-    "name": "Don Sheehy",
-    "photo": "images/don_sheehy.jpg",
-    "research": "Computational Geometry, Topology, Data Structures",
-    "website": "https://donsheehy.net"
+    "name": "Steffen Heber",
+    "photo": "images/heber.jpg",
+    "research": "Computational Biology",
+    "website": "https://sheber.wordpress.ncsu.edu/"
   },
   {
     "name": "Jamie Jennings",
-    "photo": "images/jamie_jennings.jpg",
+    "photo": "images/jennings.jpg",
     "research": "Algorithms, Programming Languages",
     "website": "https://jamiejennings.com/"
   },
   {
-    "name": "Matt Stallmann",
-    "photo": "images/matt_stallmann.jpg",
-    "research": "Algorithmic Experiments and Visualization",
-    "website": "https://mfms.wordpress.ncsu.edu"
+    "name": "Chin Ho Lee",
+    "photo": "images/lee.jpg",
+    "research": "Complexity Theory, Pseudorandomness",
+    "website": "https://chinholee.github.io"
   },
   {
     "name": "Sharath Raghvendra",
-    "photo": "images/sharath_raghvendra.jpg",
+    "photo": "images/raghvendra.jpg",
     "research": "Geometry and Machine Learning",
     "website": "https://www.csc.ncsu.edu/people/skraghve"
   },
   {
-    "name": "Sharma Thankachan",
-    "photo": "images/sharma_thankachan.jpg",
-    "research": "String Algorithms",
-    "website": "https://www.csc.ncsu.edu/people/svalliy"
+    "name": "Alessandra Scafuro",
+    "photo": "images/scafuro.jpg",
+    "research": "Cryptography",
+    "website": "https://sites.google.com/ncsu.edu/ascafuro/"
   },
   {
-    "name": "Steffen Heber",
-    "photo": "images/steffen_heber.jpg",
-    "research": "Computational Biology",
-    "website": "https://sheber.wordpress.ncsu.edu/"
+    "name": "Don Sheehy",
+    "photo": "images/sheehy.jpg",
+    "research": "Computational Geometry, Topology, Data Structures",
+    "website": "https://donsheehy.net"
+  },
+  {
+    "name": "Matt Stallmann",
+    "photo": "images/stallmann.jpg",
+    "research": "Algorithmic Experiments and Visualization",
+    "website": "https://mfms.wordpress.ncsu.edu"
+  },
+  {
+    "name": "Sharma Thankachan",
+    "photo": "images/thankachan.jpg",
+    "research": "String Algorithms",
+    "website": "https://www.csc.ncsu.edu/people/svalliy"
   }
 ]

@@ -1,14 +1,14 @@
 [
-  {
-    "text": "NCSU Home",
-    "url": "https://www.ncsu.edu"
+  { "text": "NCSU CS Theory Mailing List",
+    "url" : "https://groups.google.com/a/lists.ncsu.edu/g/csc-theory/"
   },
   {
-    "text": "CS Department",
-    "url": "https://www.csc.ncsu.edu"
+    "text": "Theory Group at Duke",
+    "url": "https://cstheory.wiki.duke.edu/"
   },
   {
-    "text": "Library Services",
-    "url": "https://www.lib.ncsu.edu"
+    "text": "TCS+: Online seminar in theoretical computer science",
+    "url": "https://www.tcsplus.org/"
   }
+
 ]

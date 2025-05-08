@@ -1,9 +1,9 @@
 [
   {
-    "name": "Emma Saarinen",
-    "photo": "images/jane.jpg",
-    "research": "Geometry and Machine Learning",
-    "website": ""
+    "name": "Oliver Chubet",
+    "photo": "images/oliver.jpg",
+    "research": "Topology, Computational Geometry",
+    "website": "https://oliverchubet.github.io/"
   },
   {
     "name": "Mano Prakash Parthasarathi",
@@ -12,10 +12,10 @@
     "website": "https://manoprakash6.github.io"
   },
   {
-    "name": "Oliver Chubet",
-    "photo": "images/oliver.jpg",
-    "research": "Topology, Computational Geometry",
-    "website": "https://oliverchubet.github.io/"
+    "name": "Emma Saarinen",
+    "photo": "images/wolf-head.png",
+    "research": "Geometry and Machine Learning",
+    "website": "#"
   },
   {
     "name": "Siddharth Sheth",

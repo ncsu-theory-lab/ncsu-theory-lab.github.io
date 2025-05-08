@@ -18,35 +18,22 @@ export async function renderStudents() {
     }
 
     const deck = document.createElement("div");
-    deck.className = "card-rows"; // Bootstrap card-deck for a cohesive layout
-
-    let currentRow;
+    deck.className = "card-deck"; // Bootstrap card-deck for a cohesive layout
 
     data.forEach((person, index) => {
-      if (index % 3 === 0)
-      {
-        // Start a new row every 3 faculty members
-        currentRow = document.createElement('div');
-        currentRow.className = 'row g-4 mb-4';
-        deck.appendChild(currentRow); // Append each row to the deck
-      }
-
-      // Individual card with margin
       const card = document.createElement('div');
-      card.className = 'col-12 col-md-6 col-lg-4 mb-4';
+      card.className = "card mx-3 mb-3";
       
       card.innerHTML = `
-        <div class="card h-100">
-          <img src="${person.photo}" class="card-img-top" alt="${person.name}" style="height: 200px; object-fit: cover;">
+          <img src="${person.photo}" class="card-img-top" alt="${person.name}">
           <div class="card-body text-center">
-          <h5 class="card-title">
-            <a href="${person.website}" target="_blank">${person.name}</a>
-          </h5> <!-- Name as the card title, centered -->
-          <p class="card-text mt-2">${person.research}</p> <!-- Research as card text -->
-        </div>
+            <h6 class="card-title mb-0">
+              <a href="${person.website}" target="_blank">${person.name}</a>
+            </h6>
+            <small class="mb-0">${person.research}</small>
       `;
 
-      currentRow.appendChild(card); // Append each card to the current-row
+      deck.appendChild(card); // Append each card to the current-row
     });
 
     container.appendChild(deck); // Append the card deck to the content container
