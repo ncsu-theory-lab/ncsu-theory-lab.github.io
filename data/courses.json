@@ -1,18 +1,6 @@
 [
   {
-    "name": "CSC 414: Foundations of Cryptography",
-    "link": "#"
-  },
-  {
-    "name": "CSC 491: Advanced Algorithms",
-    "link": "https://chinholee.github.io/csc491/"
-  },
-  {
-    "name": "CSC 565: Graph Theory",
-    "link": "#"
-  },
-  {
-    "name" : "CSC 591: Advanced Cryptographic Protocols",
+    "name": "CSC 514: Foundations of Cryptography",
     "link": "#"
   },
   {
@@ -20,7 +8,7 @@
     "link": "#"
   },
   {
-    "name" : "CSC 591/791: Optimal Transport in ML",
+    "name": "CSC 707: Computational Complexity",
     "link": "#"
   }
 ]
