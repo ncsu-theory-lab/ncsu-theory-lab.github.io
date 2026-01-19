@@ -1,9 +1,21 @@
 [
   {
+    "name": "Debjany Ghosh Aronno",
+    "photo": "images/debjany.jpg",
+    "research": "Complexity Theory, Pseudorandomness",
+    "website": "https://aronno1912.github.io/"
+  },
+  {
     "name": "Oliver Chubet",
     "photo": "images/oliver.jpg",
     "research": "Topology, Computational Geometry",
     "website": "https://oliverchubet.github.io/"
+  },
+  {
+    "name": "Maryam Mubarak",
+    "photo": "images/maryam.jpg",
+    "research": "Computational Geometry, Multi-dimensional Scaling",
+    "website": "#"
   },
   {
     "name": "Mano Prakash Parthasarathi",
