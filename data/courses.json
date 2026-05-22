@@ -1,14 +1,14 @@
 [
   {
-    "name": "CSC 514: Foundations of Cryptography",
+    "name": "CSC 366: Design and Analysis of Algorithms",
     "link": "#"
   },
   {
-    "name" : "CSC 591: Algorithms on Strings",
+    "name" : "CSC 414/514: Foundations of Cryptography",
     "link": "#"
   },
   {
-    "name": "CSC 707: Computational Complexity",
+    "name": "CSC 541: Advanced Data Structures",
     "link": "#"
   }
 ]
