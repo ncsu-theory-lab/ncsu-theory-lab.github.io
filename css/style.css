@@ -89,3 +89,21 @@ a:hover {
   object-fit: cover;
   object-position: 20% 30%; /* Adjusts which part of the image is visible */
 }
+
+.calendar-container {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.calendar-container iframe {
+  width: 100%;
+  height: 650px;
+  border: 0;
+}
+
+.view-full-calendar {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
