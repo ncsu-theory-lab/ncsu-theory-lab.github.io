@@ -6,7 +6,7 @@ export async function renderLinks() {
   linksList.innerHTML = ""; // Clear previous content
 
   if (links.length === 0) {
-    container.innerHTML = `
+    linksList.innerHTML = `
       <li>No useful links available at the moment.</li>`;
     return;
   }
@@ -17,5 +17,4 @@ export async function renderLinks() {
     linksList.appendChild(li);
   });
 
-  container.appendChild(list);
 }
