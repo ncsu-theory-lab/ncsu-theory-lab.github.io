@@ -452,3 +452,92 @@ button:focus-visible {
     font-size: 0.95rem;
   }
 }
+
+/* ==================================================
+   Footer
+   ================================================== */
+
+.site-footer {
+  margin-top: 4rem;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border-top: 6px solid var(--ncsu-red);
+}
+
+.site-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 20px 1.25rem;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-university {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.footer-group {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: #eeeeee;
+}
+
+.footer-location {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #bbbbbb;
+}
+
+
+/* Footer links */
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem 1.25rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+/* Bottom line */
+
+.footer-bottom {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+
+  border-top: 1px solid #555;
+
+  color: #bbbbbb;
+  font-size: 0.8rem;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
+}
