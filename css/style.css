@@ -90,6 +90,12 @@ a:hover {
   object-position: 20% 30%; /* Adjusts which part of the image is visible */
 }
 
+
+
+/* ==================================================
+   Calendar
+   ================================================== */
+
 .calendar-container {
   width: 100%;
   margin-top: 1rem;
@@ -106,4 +112,411 @@ a:hover {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
+}
+
+/* ==================================================
+   Announcements
+   ================================================== */
+
+.announcements-section {
+  margin-top: 3.5rem;
+}
+
+
+/* ---------- Section heading ---------- */
+
+.announcements-heading {
+  border-bottom: 4px solid #cc0000;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.65rem;
+}
+
+.announcements-heading h4 {
+  margin: 0;
+  font-size: 1.55rem;
+  color: #222;
+}
+
+.announcements-heading p {
+  margin: 0.2rem 0 0;
+
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* ---------- Announcement list ---------- */
+
+.announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+
+/* ---------- Individual announcement ---------- */
+
+.announcement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 1.15rem 1.25rem;
+
+  background: #ffffff;
+
+  border: 1px solid #d8d8d8;
+  border-left: 5px solid #cc0000;
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.announcement-item:hover {
+  background-color: #fafafa;
+  border-left-color: #990000;
+}
+
+
+/* ---------- Featured / newest announcement ---------- */
+
+.announcement-featured {
+  border-left-width: 7px;
+  border-color: #cc0000;
+  background-color: #fffafa;
+}
+
+.announcement-featured:hover {
+  background-color: #fff6f6;
+}
+
+
+/* ---------- Icon ---------- */
+
+.announcement-icon {
+  flex: 0 0 42px;
+
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #cc0000;
+  border-radius: 50%;
+}
+
+.announcement-icon svg {
+  width: 21px;
+  height: 21px;
+
+  fill: none;
+  stroke: #ffffff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* ---------- Main announcement content ---------- */
+
+.announcement-body {
+  flex: 1;
+  min-width: 0;
+}
+
+
+/* ---------- Date / category / latest ---------- */
+
+.announcement-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+
+  margin-bottom: 0.45rem;
+}
+
+.announcement-date {
+  color: #555;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+
+/* Category badge */
+
+.announcement-category {
+  display: inline-block;
+
+  padding: 0.16rem 0.5rem;
+
+  background-color: #333333;
+  color: #ffffff;
+
+  border-radius: 2px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+
+/* Latest badge */
+
+.latest-badge {
+  display: inline-block;
+
+  padding: 0.16rem 0.5rem;
+
+  background-color: #cc0000;
+  color: #ffffff;
+
+  border-radius: 2px;
+
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+
+/* ---------- Announcement text ---------- */
+
+.announcement-text {
+  margin: 0;
+
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+
+/* ---------- Read more ---------- */
+
+.announcement-link {
+  display: inline-block;
+
+  margin-top: 0.45rem;
+
+  color: #cc0000;
+
+  font-size: 0.88rem;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.announcement-link:hover {
+  color: #990000;
+  text-decoration: underline;
+}
+
+.announcements-toggle {
+  display: block;
+  margin: 1.25rem auto 0;
+
+  padding: 0.55rem 1.1rem;
+
+  background: #ffffff;
+  color: #cc0000;
+
+  border: 1px solid #cc0000;
+  border-radius: 2px;
+
+  font-weight: 600;
+  font-size: 0.9rem;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.announcements-toggle:hover {
+  background-color: #cc0000;
+  color: #ffffff;
+}
+
+
+/* ---------- Empty state ---------- */
+
+.announcement-empty {
+  color: #555;
+}
+
+
+/* ==================================================
+   Fade-in animation
+   ================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/*
+ * Respect users who have disabled animations
+ */
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+}
+
+
+/* ==================================================
+   Mobile
+   ================================================== */
+
+@media (max-width: 768px) {
+
+  .announcement-item {
+    padding: 1rem;
+    gap: 0.8rem;
+  }
+
+  .announcement-icon {
+    flex-basis: 36px;
+
+    width: 36px;
+    height: 36px;
+  }
+
+  .announcement-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .announcement-text {
+    font-size: 0.95rem;
+  }
+
+}
+
+/* ==================================================
+   Latest announcement teaser
+   ================================================== */
+
+.latest-announcement-box {
+  background-color: #ffffff;
+
+  border: 1px solid #d8d8d8;
+  border-top: 5px solid #cc0000;
+
+  padding: 1.1rem 1.2rem;
+}
+
+
+/* Heading */
+
+.latest-announcement-label {
+  color: #cc0000;
+
+  /* font-size: 0.75rem; */
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  margin-bottom: 0.7rem;
+}
+
+
+/* Date and category */
+
+.latest-announcement-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+
+  margin-bottom: 0.6rem;
+}
+
+.latest-announcement-date {
+  color: #555;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.latest-announcement-category {
+  display: inline-block;
+
+  padding: 0.13rem 0.45rem;
+
+  background-color: #333;
+  color: #fff;
+
+  border-radius: 2px;
+
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+
+/* Announcement text */
+
+.latest-announcement-text {
+  margin: 0;
+
+  color: #222;
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+
+/* "View all announcements" */
+
+.latest-announcement-more {
+  display: inline-block;
+
+  margin-top: 0.75rem;
+
+  color: #cc0000;
+
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.latest-announcement-more:hover {
+  color: #990000;
+  text-decoration: underline;
+}
+
+.latest-announcement-readmore {
+  display: inline-block;
+  margin-top: 0.5rem;
+
+  color: #cc0000;
+  font-size: 0.85rem;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.latest-announcement-readmore:hover {
+  color: #990000;
+  text-decoration: underline;
 }

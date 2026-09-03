@@ -74,6 +74,21 @@
 
       <div class="col-lg-4">
         <!-- Sidebar Components -->
+        
+        <!-- Latest Announcement -->
+        <div id="latest-announcement" class="latest-announcement-box mb-4">
+          <div class="latest-announcement-label">
+            Latest Announcement
+          </div>
+
+          <div id="latest-announcement-content"></div>
+
+          <a href="#announcements-section" class="latest-announcement-more">
+            View all announcements →
+          </a>
+        </div>
+
+        <!-- Upcoming Events -->
         <div id="eventsList">
           <h5>Upcoming Events</h5>
           <ul id="events"></ul>
@@ -83,11 +98,13 @@
           </a>
         </div>
 
+        <!-- Courses -->
         <div id="coursesList">
           <h5>Courses (Fall 2026)</h5>
           <ul id="courses"></ul>
         </div>
 
+        <!-- Useful Links -->
         <div id="linksList">
           <h5>Useful Links</h5>
           <ul id="links"></ul>
@@ -95,9 +112,19 @@
       </div>
     </div>
 
+    <!-- Announcements -->
+    <section id="announcements-section" class="announcements-section mt-5">
+      <div class="announcements-heading">
+        <div>
+          <h4>Announcements</h4>
+        </div>
+      </div>
+      <div id="announcements" class="announcements-list"></div>
+    </section>
+
     <!-- Theory Seminar Calendar -->
     <div id="calendar-section" class="mt-5">
-      <h5>Theory Seminar Calendar</h5>
+      <h4>Theory Seminar Calendar</h4>
       <div class="calendar-container">
         <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&title=NCSU%20CS%20Theory%20Group&mode=AGENDA&showCalendars=0&showTabs=0&src=Y18wNzgwMjg1NzUyYjFhZjI4ZTA4ZTRiZTJhZWNlMjEzYTlhYTM0MGYyODg3NTVkZDYxZjNiMGI3NmUzOTcyODYwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986cb"
           frameborder="0"
