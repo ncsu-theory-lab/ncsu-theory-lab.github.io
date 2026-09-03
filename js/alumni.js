@@ -1,0 +1,49 @@
+import { fetchData } from './loadComponents.js'; // Import fetchData function
+
+export async function renderAlumni() {
+  try {
+    const data = await fetchData("data/alumni.json"); // Fetch alumni data
+    const container = document.getElementById("alumni-content-container");
+
+    if (!container) {
+      console.error("Content container not found.");
+      return;
+    }
+
+    container.innerHTML = ""; // Clear previous content
+
+    if (data.length === 0) {
+      container.innerHTML = "<p>No alumni members found.</p>"; // Handle empty data gracefully
+      return;
+    }
+
+    const deck = document.createElement("div");
+    deck.className = "card-deck"; // Bootstrap card-deck for a cohesive layout
+
+    data.forEach((person, index) => {
+      const card = document.createElement('div');
+      card.className = "card mx-3 mb-3";
+      
+      card.innerHTML = `
+          <img src="${person.photo}" class="card-img-top" alt="${person.name}">
+          <div class="card-body text-center">
+            <h6 class="card-title mb-0">
+              <a href="${person.website}" target="_blank">${person.name}</a>
+            </h6>
+            <small class="d-block mb-1">${person.research}</small>
+            <small class="d-block">${person["current-position"]}</small>
+          </div>
+      `;
+
+      deck.appendChild(card); // Append each card to the current-row
+    });
+
+    container.appendChild(deck); // Append the card deck to the content container
+  } catch (error) {
+    console.error("Error rendering alumni content:", error);
+    const container = document.getElementById("alumni-content-container");
+    if (container) {
+      container.innerHTML = "<p>Error loading alumni data. Please try again later.</p>";
+    }
+  }
+}

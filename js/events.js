@@ -4,7 +4,7 @@ import 'https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js';
 export async function renderEvents() {
   const calendarId = 'c_0780285752b1af28e08e4be2aece213a9aa340f288755dd61f3b0b76e3972860@group.calendar.google.com';
   const apiKey = 'AIzaSyDSCWLIW5u9qFW1RCV_e75Cuw06n4QpdQc';
-  const maxResults = 10;
+  const maxResults = 5;
 
 
   const url = `https://www.googleapis.com/calendar/v3/calendars/${encodeURIComponent(calendarId)}/events?key=${apiKey}&orderBy=startTime&singleEvents=true&timeMin=${(new Date()).toISOString()}&maxResults=${maxResults}`;

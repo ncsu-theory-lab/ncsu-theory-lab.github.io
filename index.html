@@ -50,6 +50,9 @@
           <li class="nav-item">
             <button class="btn btn-dark rounded-0 border-light" id="students-tab" type="button">Students</button>
           </li>
+          <li class="nav-item">
+            <button class="btn btn-dark rounded-0 border-light" id="alumni-tab" type="button">Alumni</button>
+          </li>
         </ul>
 
         <!-- Content Section -->
@@ -62,30 +65,122 @@
             <div class="container" id="students-content-container">
             </div>
           </div> <!-- For Students -->
+          <div id="alumni-content" style="display: none;">
+            <div class="container" id="alumni-content-container">
+            </div>
+          </div> <!-- For Alumni -->
         </div>
       </div>
 
       <div class="col-lg-4">
         <!-- Sidebar Components -->
+        
+        <!-- Latest Announcement -->
+        <div id="latest-announcement" class="latest-announcement-box mb-4">
+          <div class="latest-announcement-label">
+            Latest Announcement
+          </div>
+
+          <div id="latest-announcement-content"></div>
+
+          <a href="#announcements-section" class="latest-announcement-more">
+            View all announcements →
+          </a>
+        </div>
+
+        <!-- Upcoming Events -->
         <div id="eventsList">
           <h5>Upcoming Events</h5>
           <ul id="events"></ul>
+
+          <a href="#calendar-section" class="view-full-calendar">
+            View full calendar →
+          </a>
         </div>
 
+        <!-- Courses -->
         <div id="coursesList">
           <h5>Courses (Fall 2026)</h5>
           <ul id="courses"></ul>
         </div>
 
+        <!-- Useful Links -->
         <div id="linksList">
           <h5>Useful Links</h5>
           <ul id="links"></ul>
         </div>
       </div>
     </div>
+
+    <!-- Announcements -->
+    <section id="announcements-section" class="announcements-section mt-5">
+      <div class="announcements-heading">
+        <div>
+          <h4>Announcements</h4>
+        </div>
+      </div>
+      <div id="announcements" class="announcements-list"></div>
+    </section>
+
+    <!-- Theory Seminar Calendar -->
+    <div id="calendar-section" class="mt-5">
+      <h4>Theory Seminar Calendar</h4>
+      <div class="calendar-container">
+        <iframe src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FNew_York&showPrint=0&title=NCSU%20CS%20Theory%20Group&mode=AGENDA&showCalendars=0&showTabs=0&src=Y18wNzgwMjg1NzUyYjFhZjI4ZTA4ZTRiZTJhZWNlMjEzYTlhYTM0MGYyODg3NTVkZDYxZjNiMGI3NmUzOTcyODYwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%237986cb"
+          frameborder="0"
+          scrolling="no">
+        </iframe>
+      </div>
+    </div>
   </div>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="footer-main">
+        <div class="footer-identity">
+          <div class="footer-university">
+            NC STATE UNIVERSITY
+          </div>
+          
+          <div class="footer-group">
+            Department of Computer Science · Theory Group
+          </div>
+
+          <div class="footer-location">
+            Raleigh, NC 27695
+          </div>
+        </div>
+
+        <nav class="footer-links" aria-label="Footer navigation">
+          <a href="https://www.csc.ncsu.edu/" target="_blank" rel="noopener noreferrer">
+            Computer Science
+          </a>
+
+          <a href="https://www.ncsu.edu/" target="_blank" rel="noopener noreferrer">
+            NC State University
+          </a>
+
+          <a href="https://accessibility.ncsu.edu/" target="_blank" rel="noopener noreferrer">
+            Accessibility
+          </a>
+
+          <a href="https://www.ncsu.edu/privacy/" target="_blank" rel="noopener noreferrer">
+            Privacy
+          </a>
+        </nav>
+      </div>
+
+      <div class="footer-bottom">
+        © <span id="copyright-year"></span> NC State University
+      </div>
+    </div>
+  </footer>
+
   <!-- Bootstrap JS
   <script src="https://cdn.ncsu.edu/brand-assets/bootstrap-4/js/bootstrap.min.js" defer></script> -->
+  <script>
+    document.getElementById("copyright-year").textContent = new Date().getFullYear();
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 </html>

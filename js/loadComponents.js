@@ -2,13 +2,15 @@ import { renderAbout } from './about.js';
 import { renderEvents } from './events.js';
 import { renderCourses } from './courses.js';
 import { renderLinks } from './links.js';
+import { renderAnnouncements } from './announcements.js';
 
 export async function loadComponents() {
   try {
     // renderAbout(); // Render the About section
     await renderEvents(); // Load seminars
     await renderCourses(); // Load courses
-    await renderLinks();
+    await renderLinks(); // Load links
+    await renderAnnouncements(); // Load announcements
     console.log("All components loaded successfully.");
   } catch (error) {
     console.error("Error loading components:", error);

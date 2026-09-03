@@ -1,0 +1,55 @@
+[
+  {
+    "date": "July 2026",
+    "category": "Paper",
+    "text": "A paper titled 'Compressed Inverse Suffix Arrays,' by <strong>Sharma Thankachan</strong> has been accepted to FoCS 2026.",
+    "url": "https://focs.computer.org/2026/accepted-papers/"
+  },
+  {
+    "date": "June 2026",
+    "category": "Paper",
+    "text": "<strong>Sharath Raghvendra</strong>, together with Pankaj K. Agarwal and Keegan Yao, had their paper, 'Fast Algorithms for Continuous Optimal Transport Between Histograms,' accepted to ESA 2026.",
+    "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2026.123"
+  },
+  {
+    "date": "June 2026",
+    "category": "Paper",
+    "text": "<strong>Sharma Thankachan</strong>, together with Daniel Gibney, and Kaamil Kaka, had their paper, 'Indexing Integer Strings Using Local Difference Bounds,' accepted to ESA 2026.",
+    "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ESA.2026.151"
+  },
+  {
+    "date": "April 2026",
+    "category": "Paper",
+    "text": "<strong>Chin Ho Lee</strong>, together with Jordan Horacsek, Igor Shinkar, Emanuele Viola, and Renfei Zhou had their paper, 'Local Samplers for Product Distributions,' accepted to ICALP 2026.",
+    "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.ICALP.2026.109"
+  },
+  {
+    "date": "February 2026",
+    "category": "Paper",
+    "text": "<strong>Sharma Thankachan</strong>, together with Ling Li, Daniel Gibney, Solon P Pissis, and Grigorios Loukides had their paper, 'Contextual Pattern Mining and Counting,' accepted to ICDE 2026.",
+    "url": "https://arxiv.org/abs/2506.17613"
+  },  
+  {
+    "date": "January 2026",
+    "category": "Paper",
+    "text": "<strong>Sharath Raghvendra</strong>, together with Ritesh Seth, Mrinal Garg, Sujoy Bhore, and Syamantak Das, had their paper 'Efficient algorithms for Incremental Metric Bipartite Matching,' accepted to ICLR 2026.",
+    "url": "https://iclr.cc/virtual/2026/poster/10006701"
+  },
+  {
+    "date": "January 2026",
+    "category": "Paper",
+    "text": "<strong>Oliver Chubet, and Sharath Raghvendra</strong>, along with Pankaj K. Agarwal and Keegan Yao, had their paper 'A Scalable Constant-Factor Approximation Algorithm for <i>W</i><sub><i>p</i></sub> Optimal Transport,' accepted to ICLR 2026.",
+    "url": "https://iclr.cc/virtual/2026/poster/10009496"
+  },
+  {
+    "date": "January 2026",
+    "category": "Award",
+    "text": "<strong>Mano Prakash Parthasarathi</strong> received the Mentored Teaching Fellowship by NCSU College of Engineering for Spring 2026."
+  },
+  {
+    "date": "December 2025",
+    "category": "Paper",
+    "text": "<strong>Mano Prakash Parthasarathi</strong> and <strong>Sharma Thankachan</strong>, together with Muhammed Oguzhan Kulekci, and Rahul Shah, had their paper 'Relative Compressed Reverse Suffix Array,' accepted to STACS 2026.",
+    "url": "https://drops.dagstuhl.de/entities/document/10.4230/LIPIcs.STACS.2026.62"
+  }
+]

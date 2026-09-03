@@ -1,6 +1,7 @@
 import { loadComponents } from './loadComponents.js';
 import { renderFaculty } from './faculty.js';
 import { renderStudents } from './students.js';
+import { renderAlumni } from './alumni.js';
 
 
 document.addEventListener('DOMContentLoaded', async function () {
@@ -10,24 +11,31 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Get references to the tabs
     const facultyTab = document.getElementById("faculty-tab");
     const studentsTab = document.getElementById("students-tab");
+    const alumniTab = document.getElementById("alumni-tab");
 
-    if (facultyTab && studentsTab) {
+    if (facultyTab && studentsTab && alumniTab) {
       // Show faculty content by default
       await renderFaculty();
-      switchToTab("faculty-content", "students-content");
+      switchToTab("faculty-content");
       setActiveTab(facultyTab); // Set active class on faculty tab
 
       // Add event listeners for tab switching
       facultyTab.addEventListener("click", async () => {
         await renderFaculty(); // Show faculty content
-        switchToTab("faculty-content", "students-content");
+        switchToTab("faculty-content");
         setActiveTab(facultyTab); // Set active class for faculty tab
       });
 
       studentsTab.addEventListener("click", async () => {
         await renderStudents(); // Show student content
-        switchToTab("students-content", "faculty-content");
+        switchToTab("students-content");
         setActiveTab(studentsTab); // Set active class for students tab
+      });
+
+      alumniTab.addEventListener("click", async () => {
+        await renderAlumni(); // Show alumni content
+        switchToTab("alumni-content");
+        setActiveTab(alumniTab); // Set active class for alumni tab
       });
     } else {
       console.error("Tabs not found. Check element IDs in HTML.");
@@ -38,16 +46,22 @@ document.addEventListener('DOMContentLoaded', async function () {
 });
 
 // Helper function to handle tab switching logic
-function switchToTab(showId, hideId) {
-  const showElement = document.getElementById(showId);
-  const hideElement = document.getElementById(hideId);
+function switchToTab(showId) {
+  const tabContents = [
+    "faculty-content",
+    "students-content",
+    "alumni-content"
+  ];
 
-  if (showElement && hideElement) {
-    showElement.style.display = 'block'; // Show the selected tab content
-    hideElement.style.display = 'none';   // Hide the other tab content
-  } else {
-    console.error(`Element with ID ${showId} or ${hideId} not found.`);
-  }
+  tabContents.forEach(id => {
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.style.display = (id === showId) ? "block" : "none";
+    } else {
+      console.error(`Element with ID ${id} not found.`);
+    }
+  });
 }
 
 // Helper function to set the active tab

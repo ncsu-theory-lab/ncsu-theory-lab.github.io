@@ -1,26 +1,44 @@
-/* Apply consistent styling across the site */
+/* ==================================================
+   NC State Theory Group
+   ================================================== */
+
+:root {
+  --ncsu-red: #cc0000;
+  --ncsu-red-dark: #990000;
+
+  --text: #222;
+  --text-muted: #555;
+
+  --border: #d8d8d8;
+  --surface: #ffffff;
+  --surface-hover: #fafafa;
+  --surface-featured: #fffafa;
+  --surface-featured-hover: #fff6f6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-feature-settings: "liga" 1, "calt" 1;
 }
 
 .page-container {
   max-width: 1200px;
-  margin: 0 auto; /* Center content horizontally */
+  margin: 0 auto;
   padding: 20px;
 }
 
 
-.nav-tabs .nav-link.active {
-  color: #fff; 
-  background-color: #d0021b;
-  border-color: #d0021b; 
-}
-
+/* ==================================================
+   Global elements
+   ================================================== */
 
 ul {
   padding-top: 0;
@@ -28,49 +46,53 @@ ul {
 }
 
 li {
+  margin-bottom: 2px;
   list-style-type: disc;
-  margin-bottom: 2px; /* Add spacing between list items */
 }
 
 a {
-  color: #cc0000; /* Default red color for links */
+  color: var(--ncsu-red);
   text-decoration: none;
-  font-weight: normal; /* Optional for emphasis */
 }
 
 a:hover {
-  color: #990000; /* More intense red on hover */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Optional for emphasis */
+  color: var(--ncsu-red-dark);
+  text-decoration: underline;
 }
 
-.nav-item{
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ncsu-red);
+  outline-offset: 2px;
+}
+
+
+/* ==================================================
+   Navigation / buttons
+   ================================================== */
+
+.nav-item {
   list-style-type: none;
 }
 
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: var(--ncsu-red);
+  border-color: var(--ncsu-red);
+}
+
 .btn {
-  background-color: #cc0000;
+  background-color: var(--ncsu-red);
 }
+
 .btn:hover {
-  background-color: #990000; /* More intense red on hover */
+  background-color: var(--ncsu-red-dark);
 }
 
-.btn:focus {
-  outline: none; /* Remove the focus outline */
-  box-shadow: none; /* Remove any box-shadow applied during focus */
-}
 
-/*
-@media (max-width: 767px) {
-  .card {
-    margin-bottom: 1rem;
-  }
-  .col {
-    display: flex;
-    justify-content: center;
-  }
-}
-*/
+/* ==================================================
+   People cards
+   ================================================== */
 
 .card-deck {
   display: flex;
@@ -80,12 +102,442 @@ a:hover {
 
 .card {
   width: 200px;
-  /* flex: 1 0 auto; */
 }
-
 
 .card-img-top {
   height: 200px;
   object-fit: cover;
-  object-position: 20% 30%; /* Adjusts which part of the image is visible */
+  object-position: 20% 30%;
+}
+
+
+/* ==================================================
+   Calendar
+   ================================================== */
+
+.calendar-container {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.calendar-container iframe {
+  width: 100%;
+  height: 650px;
+  border: 0;
+}
+
+.view-full-calendar {
+  display: inline-block;
+  margin: 0.5rem 0;
+  font-weight: 500;
+}
+
+
+/* ==================================================
+   Announcements
+   ================================================== */
+
+.announcements-section {
+  margin-top: 3.5rem;
+}
+
+.announcements-heading {
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 4px solid var(--ncsu-red);
+}
+
+.announcements-heading h4 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.55rem;
+}
+
+.announcements-heading p {
+  margin: 0.2rem 0 0;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.announcements-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+
+/* Announcement item */
+
+.announcement-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+
+  padding: 1.15rem 1.25rem;
+
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--ncsu-red);
+
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.announcement-item:hover {
+  background-color: var(--surface-hover);
+  border-left-color: var(--ncsu-red-dark);
+}
+
+.announcement-featured {
+  background-color: var(--surface-featured);
+  border-color: var(--ncsu-red);
+  border-left-width: 7px;
+}
+
+.announcement-featured:hover {
+  background-color: var(--surface-featured-hover);
+}
+
+
+/* Announcement icon */
+
+.announcement-icon {
+  display: flex;
+  flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
+
+  width: 42px;
+  height: 42px;
+
+  background-color: var(--ncsu-red);
+  border-radius: 50%;
+}
+
+.announcement-icon svg {
+  width: 21px;
+  height: 21px;
+
+  fill: none;
+  stroke: #fff;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+
+/* Announcement content */
+
+.announcement-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.announcement-meta,
+.latest-announcement-meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.announcement-meta {
+  margin-bottom: 0.45rem;
+}
+
+.announcement-date,
+.latest-announcement-date {
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.announcement-date {
+  font-size: 0.82rem;
+}
+
+.latest-announcement-date {
+  font-size: 0.8rem;
+}
+
+.announcement-category,
+.latest-announcement-category,
+.latest-badge {
+  display: inline-block;
+
+  color: #fff;
+  border-radius: 2px;
+
+  font-weight: 700;
+  letter-spacing: 0.035em;
+  text-transform: uppercase;
+}
+
+.announcement-category,
+.latest-announcement-category {
+  background-color: #333;
+}
+
+.announcement-category {
+  padding: 0.16rem 0.5rem;
+  font-size: 0.7rem;
+}
+
+.latest-announcement-category {
+  padding: 0.13rem 0.45rem;
+  font-size: 0.65rem;
+}
+
+.latest-badge {
+  padding: 0.16rem 0.5rem;
+  background-color: var(--ncsu-red);
+  font-size: 0.7rem;
+}
+
+.announcement-text {
+  margin: 0;
+  color: var(--text);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+
+/* Announcement links */
+
+.announcement-link,
+.latest-announcement-more,
+.latest-announcement-readmore {
+  display: inline-block;
+  color: var(--ncsu-red);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.announcement-link:hover,
+.latest-announcement-more:hover,
+.latest-announcement-readmore:hover {
+  color: var(--ncsu-red-dark);
+  text-decoration: underline;
+}
+
+.announcement-link {
+  margin-top: 0.45rem;
+  font-size: 0.88rem;
+}
+
+.latest-announcement-more {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.latest-announcement-readmore {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+
+/* Show more / fewer */
+
+.announcements-toggle {
+  display: block;
+  margin: 1.25rem auto 0;
+  padding: 0.55rem 1.1rem;
+
+  color: var(--ncsu-red);
+  background: var(--surface);
+  border: 1px solid var(--ncsu-red);
+  border-radius: 2px;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.announcements-toggle:hover {
+  color: #fff;
+  background-color: var(--ncsu-red);
+}
+
+.announcement-empty {
+  color: var(--text-muted);
+}
+
+
+/* ==================================================
+   Latest announcement teaser
+   ================================================== */
+
+.latest-announcement-box {
+  padding: 1.1rem 1.2rem;
+
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--ncsu-red);
+}
+
+.latest-announcement-label {
+  margin-bottom: 0.7rem;
+
+  color: var(--ncsu-red);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.latest-announcement-meta {
+  margin-bottom: 0.6rem;
+}
+
+.latest-announcement-text {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   Reveal animation
+   ================================================== */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(12px);
+
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+
+/* ==================================================
+   Mobile
+   ================================================== */
+
+@media (max-width: 768px) {
+  .announcement-item {
+    gap: 0.8rem;
+    padding: 1rem;
+  }
+
+  .announcement-icon {
+    flex-basis: 36px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .announcement-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .announcement-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==================================================
+   Footer
+   ================================================== */
+
+.site-footer {
+  margin-top: 4rem;
+  background-color: #1f1f1f;
+  color: #ffffff;
+  border-top: 6px solid var(--ncsu-red);
+}
+
+.site-footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 20px 1.25rem;
+}
+
+.footer-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-university {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.footer-group {
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  color: #eeeeee;
+}
+
+.footer-location {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: #bbbbbb;
+}
+
+
+/* Footer links */
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.5rem 1.25rem;
+}
+
+.footer-links a {
+  color: #ffffff;
+  font-size: 0.88rem;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+
+/* Bottom line */
+
+.footer-bottom {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+
+  border-top: 1px solid #555;
+
+  color: #bbbbbb;
+  font-size: 0.8rem;
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .footer-main {
+    flex-direction: column;
+  }
+
+  .footer-links {
+    justify-content: flex-start;
+  }
 }
