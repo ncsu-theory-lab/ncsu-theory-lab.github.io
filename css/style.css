@@ -1,26 +1,44 @@
-/* Apply consistent styling across the site */
+/* ==================================================
+   NC State Theory Group
+   ================================================== */
+
+:root {
+  --ncsu-red: #cc0000;
+  --ncsu-red-dark: #990000;
+
+  --text: #222;
+  --text-muted: #555;
+
+  --border: #d8d8d8;
+  --surface: #ffffff;
+  --surface-hover: #fafafa;
+  --surface-featured: #fffafa;
+  --surface-featured-hover: #fff6f6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
   font-family: Inter, sans-serif;
-  font-feature-settings: 'liga' 1, 'calt' 1; /* fix for Chrome */
+  font-feature-settings: "liga" 1, "calt" 1;
 }
 
 .page-container {
   max-width: 1200px;
-  margin: 0 auto; /* Center content horizontally */
+  margin: 0 auto;
   padding: 20px;
 }
 
 
-.nav-tabs .nav-link.active {
-  color: #fff; 
-  background-color: #d0021b;
-  border-color: #d0021b; 
-}
-
+/* ==================================================
+   Global elements
+   ================================================== */
 
 ul {
   padding-top: 0;
@@ -28,49 +46,53 @@ ul {
 }
 
 li {
+  margin-bottom: 2px;
   list-style-type: disc;
-  margin-bottom: 2px; /* Add spacing between list items */
 }
 
 a {
-  color: #cc0000; /* Default red color for links */
+  color: var(--ncsu-red);
   text-decoration: none;
-  font-weight: normal; /* Optional for emphasis */
 }
 
 a:hover {
-  color: #990000; /* More intense red on hover */
-  text-decoration: none; /* Remove underline */
-  font-weight: bold; /* Optional for emphasis */
+  color: var(--ncsu-red-dark);
+  text-decoration: underline;
 }
 
-.nav-item{
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--ncsu-red);
+  outline-offset: 2px;
+}
+
+
+/* ==================================================
+   Navigation / buttons
+   ================================================== */
+
+.nav-item {
   list-style-type: none;
 }
 
+.nav-tabs .nav-link.active {
+  color: #fff;
+  background-color: var(--ncsu-red);
+  border-color: var(--ncsu-red);
+}
+
 .btn {
-  background-color: #cc0000;
+  background-color: var(--ncsu-red);
 }
+
 .btn:hover {
-  background-color: #990000; /* More intense red on hover */
+  background-color: var(--ncsu-red-dark);
 }
 
-.btn:focus {
-  outline: none; /* Remove the focus outline */
-  box-shadow: none; /* Remove any box-shadow applied during focus */
-}
 
-/*
-@media (max-width: 767px) {
-  .card {
-    margin-bottom: 1rem;
-  }
-  .col {
-    display: flex;
-    justify-content: center;
-  }
-}
-*/
+/* ==================================================
+   People cards
+   ================================================== */
 
 .card-deck {
   display: flex;
@@ -80,16 +102,13 @@ a:hover {
 
 .card {
   width: 200px;
-  /* flex: 1 0 auto; */
 }
-
 
 .card-img-top {
   height: 200px;
   object-fit: cover;
-  object-position: 20% 30%; /* Adjusts which part of the image is visible */
+  object-position: 20% 30%;
 }
-
 
 
 /* ==================================================
@@ -109,10 +128,10 @@ a:hover {
 
 .view-full-calendar {
   display: inline-block;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
   font-weight: 500;
 }
+
 
 /* ==================================================
    Announcements
@@ -122,30 +141,23 @@ a:hover {
   margin-top: 3.5rem;
 }
 
-
-/* ---------- Section heading ---------- */
-
 .announcements-heading {
-  border-bottom: 4px solid #cc0000;
   margin-bottom: 1.25rem;
   padding-bottom: 0.65rem;
+  border-bottom: 4px solid var(--ncsu-red);
 }
 
 .announcements-heading h4 {
   margin: 0;
+  color: var(--text);
   font-size: 1.55rem;
-  color: #222;
 }
 
 .announcements-heading p {
   margin: 0.2rem 0 0;
-
+  color: var(--text-muted);
   font-size: 0.95rem;
-  color: #555;
 }
-
-
-/* ---------- Announcement list ---------- */
 
 .announcements-list {
   display: flex;
@@ -154,7 +166,7 @@ a:hover {
 }
 
 
-/* ---------- Individual announcement ---------- */
+/* Announcement item */
 
 .announcement-item {
   display: flex;
@@ -163,10 +175,9 @@ a:hover {
 
   padding: 1.15rem 1.25rem;
 
-  background: #ffffff;
-
-  border: 1px solid #d8d8d8;
-  border-left: 5px solid #cc0000;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 5px solid var(--ncsu-red);
 
   transition:
     border-color 0.2s ease,
@@ -174,37 +185,33 @@ a:hover {
 }
 
 .announcement-item:hover {
-  background-color: #fafafa;
-  border-left-color: #990000;
+  background-color: var(--surface-hover);
+  border-left-color: var(--ncsu-red-dark);
 }
 
-
-/* ---------- Featured / newest announcement ---------- */
-
 .announcement-featured {
+  background-color: var(--surface-featured);
+  border-color: var(--ncsu-red);
   border-left-width: 7px;
-  border-color: #cc0000;
-  background-color: #fffafa;
 }
 
 .announcement-featured:hover {
-  background-color: #fff6f6;
+  background-color: var(--surface-featured-hover);
 }
 
 
-/* ---------- Icon ---------- */
+/* Announcement icon */
 
 .announcement-icon {
+  display: flex;
   flex: 0 0 42px;
+  align-items: center;
+  justify-content: center;
 
   width: 42px;
   height: 42px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  background-color: #cc0000;
+  background-color: var(--ncsu-red);
   border-radius: 50%;
 }
 
@@ -213,123 +220,136 @@ a:hover {
   height: 21px;
 
   fill: none;
-  stroke: #ffffff;
+  stroke: #fff;
   stroke-width: 1.8;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
 
 
-/* ---------- Main announcement content ---------- */
+/* Announcement content */
 
 .announcement-body {
   flex: 1;
   min-width: 0;
 }
 
-
-/* ---------- Date / category / latest ---------- */
-
-.announcement-meta {
+.announcement-meta,
+.latest-announcement-meta {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
+}
 
+.announcement-meta {
   margin-bottom: 0.45rem;
 }
 
-.announcement-date {
-  color: #555;
-  font-size: 0.82rem;
+.announcement-date,
+.latest-announcement-date {
+  color: var(--text-muted);
   font-weight: 600;
 }
 
-
-/* Category badge */
-
-.announcement-category {
-  display: inline-block;
-
-  padding: 0.16rem 0.5rem;
-
-  background-color: #333333;
-  color: #ffffff;
-
-  border-radius: 2px;
-
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
+.announcement-date {
+  font-size: 0.82rem;
 }
 
+.latest-announcement-date {
+  font-size: 0.8rem;
+}
 
-/* Latest badge */
-
+.announcement-category,
+.latest-announcement-category,
 .latest-badge {
   display: inline-block;
 
-  padding: 0.16rem 0.5rem;
-
-  background-color: #cc0000;
-  color: #ffffff;
-
+  color: #fff;
   border-radius: 2px;
 
-  font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.035em;
   text-transform: uppercase;
 }
 
+.announcement-category,
+.latest-announcement-category {
+  background-color: #333;
+}
 
-/* ---------- Announcement text ---------- */
+.announcement-category {
+  padding: 0.16rem 0.5rem;
+  font-size: 0.7rem;
+}
+
+.latest-announcement-category {
+  padding: 0.13rem 0.45rem;
+  font-size: 0.65rem;
+}
+
+.latest-badge {
+  padding: 0.16rem 0.5rem;
+  background-color: var(--ncsu-red);
+  font-size: 0.7rem;
+}
 
 .announcement-text {
   margin: 0;
-
-  color: #222;
+  color: var(--text);
   font-size: 1rem;
   line-height: 1.55;
 }
 
 
-/* ---------- Read more ---------- */
+/* Announcement links */
 
-.announcement-link {
+.announcement-link,
+.latest-announcement-more,
+.latest-announcement-readmore {
   display: inline-block;
-
-  margin-top: 0.45rem;
-
-  color: #cc0000;
-
-  font-size: 0.88rem;
+  color: var(--ncsu-red);
   font-weight: 600;
-
   text-decoration: none;
 }
 
-.announcement-link:hover {
-  color: #990000;
+.announcement-link:hover,
+.latest-announcement-more:hover,
+.latest-announcement-readmore:hover {
+  color: var(--ncsu-red-dark);
   text-decoration: underline;
 }
+
+.announcement-link {
+  margin-top: 0.45rem;
+  font-size: 0.88rem;
+}
+
+.latest-announcement-more {
+  margin-top: 0.75rem;
+  font-size: 0.85rem;
+}
+
+.latest-announcement-readmore {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+}
+
+
+/* Show more / fewer */
 
 .announcements-toggle {
   display: block;
   margin: 1.25rem auto 0;
-
   padding: 0.55rem 1.1rem;
 
-  background: #ffffff;
-  color: #cc0000;
-
-  border: 1px solid #cc0000;
+  color: var(--ncsu-red);
+  background: var(--surface);
+  border: 1px solid var(--ncsu-red);
   border-radius: 2px;
 
-  font-weight: 600;
   font-size: 0.9rem;
-
+  font-weight: 600;
   cursor: pointer;
 
   transition:
@@ -338,20 +358,50 @@ a:hover {
 }
 
 .announcements-toggle:hover {
-  background-color: #cc0000;
-  color: #ffffff;
+  color: #fff;
+  background-color: var(--ncsu-red);
 }
 
-
-/* ---------- Empty state ---------- */
-
 .announcement-empty {
-  color: #555;
+  color: var(--text-muted);
 }
 
 
 /* ==================================================
-   Fade-in animation
+   Latest announcement teaser
+   ================================================== */
+
+.latest-announcement-box {
+  padding: 1.1rem 1.2rem;
+
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-top: 5px solid var(--ncsu-red);
+}
+
+.latest-announcement-label {
+  margin-bottom: 0.7rem;
+
+  color: var(--ncsu-red);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.latest-announcement-meta {
+  margin-bottom: 0.6rem;
+}
+
+.latest-announcement-text {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.93rem;
+  line-height: 1.5;
+}
+
+
+/* ==================================================
+   Reveal animation
    ================================================== */
 
 .reveal {
@@ -368,18 +418,12 @@ a:hover {
   transform: translateY(0);
 }
 
-
-/*
- * Respect users who have disabled animations
- */
 @media (prefers-reduced-motion: reduce) {
-
   .reveal {
     opacity: 1;
     transform: none;
     transition: none;
   }
-
 }
 
 
@@ -388,15 +432,13 @@ a:hover {
    ================================================== */
 
 @media (max-width: 768px) {
-
   .announcement-item {
-    padding: 1rem;
     gap: 0.8rem;
+    padding: 1rem;
   }
 
   .announcement-icon {
     flex-basis: 36px;
-
     width: 36px;
     height: 36px;
   }
@@ -409,114 +451,4 @@ a:hover {
   .announcement-text {
     font-size: 0.95rem;
   }
-
-}
-
-/* ==================================================
-   Latest announcement teaser
-   ================================================== */
-
-.latest-announcement-box {
-  background-color: #ffffff;
-
-  border: 1px solid #d8d8d8;
-  border-top: 5px solid #cc0000;
-
-  padding: 1.1rem 1.2rem;
-}
-
-
-/* Heading */
-
-.latest-announcement-label {
-  color: #cc0000;
-
-  /* font-size: 0.75rem; */
-  font-weight: 600;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-
-  margin-bottom: 0.7rem;
-}
-
-
-/* Date and category */
-
-.latest-announcement-meta {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.45rem;
-
-  margin-bottom: 0.6rem;
-}
-
-.latest-announcement-date {
-  color: #555;
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.latest-announcement-category {
-  display: inline-block;
-
-  padding: 0.13rem 0.45rem;
-
-  background-color: #333;
-  color: #fff;
-
-  border-radius: 2px;
-
-  font-size: 0.65rem;
-  font-weight: 700;
-  letter-spacing: 0.035em;
-  text-transform: uppercase;
-}
-
-
-/* Announcement text */
-
-.latest-announcement-text {
-  margin: 0;
-
-  color: #222;
-  font-size: 0.93rem;
-  line-height: 1.5;
-}
-
-
-/* "View all announcements" */
-
-.latest-announcement-more {
-  display: inline-block;
-
-  margin-top: 0.75rem;
-
-  color: #cc0000;
-
-  font-size: 0.85rem;
-  font-weight: 600;
-
-  text-decoration: none;
-}
-
-.latest-announcement-more:hover {
-  color: #990000;
-  text-decoration: underline;
-}
-
-.latest-announcement-readmore {
-  display: inline-block;
-  margin-top: 0.5rem;
-
-  color: #cc0000;
-  font-size: 0.85rem;
-  font-weight: 600;
-
-  text-decoration: none;
-}
-
-.latest-announcement-readmore:hover {
-  color: #990000;
-  text-decoration: underline;
 }
